@@ -130,15 +130,25 @@ academynocode-docs/
 
 ### Screenshots del proyecto
 
-> 📸 **Nota**: Los screenshots se añadirán en el segundo proyecto que documenta cómo gestionar imágenes en Docusaurus.
+#### 🏠 Homepage del proyecto
+![Homepage del Centro de Documentación](/img/projects/documentation-center/homepage.png)
+*Vista completa de la homepage con las 6 secciones principales y call-to-action*
 
-<!-- 
-Estructura preparada para screenshots:
-![Homepage del proyecto](/img/projects/documentation-center/homepage.png)
-![Sistema de blog](/img/projects/documentation-center/blog.png)  
-![Navegación y estructura](/img/projects/documentation-center/navigation.png)
-![Documentación del proyecto](/img/projects/documentation-center/project-docs.png)
--->
+#### 📝 Sistema de blog integrado
+![Sistema de blog con artículos verificados](/img/projects/documentation-center/blog.png)
+*Blog funcional con artículos verificados sobre Claude Code*
+
+#### 📖 Documentación estructurada
+![Página de documentación con navegación](/img/projects/documentation-center/documentation.png)
+*Estructura de documentación con sidebar organizado y contenido*
+
+#### 🗂️ Sección de proyectos
+![Lista de proyectos documentados](/img/projects/documentation-center/projects.png)
+*Catálogo de proyectos organizados por categorías con badges*
+
+#### 📋 Documentación detallada del proyecto
+![Este mismo proyecto documentado](/img/projects/documentation-center/project-detail.png)
+*Meta: La documentación de cómo se creó este proyecto*
 
 ### Métricas del código
 - **Archivos creados**: 23 archivos

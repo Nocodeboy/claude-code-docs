@@ -181,24 +181,54 @@ claude "Optimiza todas las imágenes del proyecto para web sin perder calidad vi
 
 ## 🔄 Automatizaciones posibles
 
-### Script de screenshots automático
+### Script de screenshots automático (Implementado)
+
+Hemos creado e implementado un script completo de automatización:
+
 ```javascript
-// screenshot.js
+// scripts/take-screenshots.js (CÓDIGO REAL IMPLEMENTADO)
 const puppeteer = require('puppeteer');
+const path = require('path');
+const fs = require('fs');
 
 async function takeScreenshots() {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  console.log('🚀 Iniciando captura de screenshots...');
   
-  await page.goto('http://localhost:3011');
-  await page.screenshot({
-    path: 'static/img/projects/documentation-center/homepage.png',
-    fullPage: true
+  const browser = await puppeteer.launch({
+    headless: true,
+    defaultViewport: { width: 1920, height: 1080 }
   });
+  
+  const page = await browser.newPage();
+  await page.setDefaultTimeout(30000);
+  
+  const screenshots = [
+    { name: 'homepage', url: 'http://localhost:3011', description: 'Página de inicio completa' },
+    { name: 'blog', url: 'http://localhost:3011/blog', description: 'Sistema de blog' },
+    { name: 'documentation', url: 'http://localhost:3011/docs/intro', description: 'Documentación' },
+    { name: 'projects', url: 'http://localhost:3011/docs/proyectos', description: 'Proyectos' },
+    { name: 'project-detail', url: 'http://localhost:3011/docs/proyectos/centro-documentacion-docusaurus', description: 'Detalle proyecto' }
+  ];
+  
+  for (const screenshot of screenshots) {
+    await page.goto(screenshot.url, { waitUntil: 'networkidle0' });
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    await page.screenshot({
+      path: `static/img/projects/documentation-center/${screenshot.name}.png`,
+      fullPage: true
+    });
+    
+    console.log(`✅ Guardado: ${screenshot.name}.png`);
+  }
   
   await browser.close();
 }
 ```
+
+**Comando para ejecutar**: `npm run screenshots`
+
+**Resultado**: 5 screenshots perfectos tomados automáticamente ✅
 
 ### Deploy hook con imágenes
 ```bash
