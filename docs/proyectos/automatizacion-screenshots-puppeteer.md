@@ -152,7 +152,7 @@ npm run screenshots
 ![Esta documentación meta](/img/projects/documentation-center/project-detail.png)
 *4. Meta: La documentación de cómo automatizamos las capturas*
 
-### ✨ **Resultado final**: 5 screenshots perfectos capturados en <30 segundos
+### ✨ **Resultado final**: 5 screenshots perfectos capturados en menos de 30 segundos
 
 ## 🎯 Lecciones aprendidas
 

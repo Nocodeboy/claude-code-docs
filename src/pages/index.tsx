@@ -180,7 +180,7 @@ function HomepageShowcase() {
               </div>
               <div className="card__body">
                 <h3>Screenshots Automáticos</h3>
-                <p>Integración de Puppeteer para capturar automáticamente screenshots del proyecto. Script completo funcionando en <30 segundos.</p>
+                <p>Integración de Puppeteer para capturar automáticamente screenshots del proyecto. Script completo funcionando en menos de 30 segundos.</p>
               </div>
               <div className="card__footer">
                 <Link className="button button--secondary" to="/docs/proyectos/automatizacion-screenshots-puppeteer">Ver Proyecto →</Link>
