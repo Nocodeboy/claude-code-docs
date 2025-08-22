@@ -126,7 +126,19 @@ academynocode-docs/
 ### Links del proyecto
 - **Repositorio**: https://github.com/Nocodeboy/claude-code-docs
 - **Desarrollo local**: http://localhost:3011
-- **Producción**: [Se deployará en Vercel]
+- **Producción**: [Deploy en Vercel siguiendo las instrucciones del segundo proyecto]
+
+### Screenshots del proyecto
+
+> 📸 **Nota**: Los screenshots se añadirán en el segundo proyecto que documenta cómo gestionar imágenes en Docusaurus.
+
+<!-- 
+Estructura preparada para screenshots:
+![Homepage del proyecto](/img/projects/documentation-center/homepage.png)
+![Sistema de blog](/img/projects/documentation-center/blog.png)  
+![Navegación y estructura](/img/projects/documentation-center/navigation.png)
+![Documentación del proyecto](/img/projects/documentation-center/project-docs.png)
+-->
 
 ### Métricas del código
 - **Archivos creados**: 23 archivos

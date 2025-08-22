@@ -21,6 +21,12 @@ Proyectos enfocados en la creación y gestión de documentación con IA.
   - Nivel: Principiante-Intermedio
   - **Proyecto real**: Este mismo sitio de documentación
 
+- **[Deployment en Vercel y Gestión de Imágenes](/docs/proyectos/deployment-vercel-imagenes)** 🚀 **COMPLEMENTARIO**
+  - Deploy automático en Vercel + gestión profesional de imágenes
+  - Stack: Vercel, GitHub Actions, Puppeteer, ImageMin
+  - Nivel: Principiante
+  - **Complementa**: El proyecto anterior con deployment y screenshots
+
 ### 🌐 Desarrollo Web
 Aplicaciones web completas que aprovechan las capacidades de Claude Code.
 
