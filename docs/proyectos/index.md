@@ -12,6 +12,15 @@ Documentación completa de proyectos reales desarrollados usando **Claude Code**
 
 ## 🗂️ Categorías de Proyectos
 
+### 📚 Documentación y Contenido
+Proyectos enfocados en la creación y gestión de documentación con IA.
+
+- **[Centro de Documentación con Docusaurus](/docs/proyectos/centro-documentacion-docusaurus)** ⭐ **NUEVO**
+  - Crea un centro de documentación completo desde cero
+  - Stack: Docusaurus v3, TypeScript, Vercel, GitHub
+  - Nivel: Principiante-Intermedio
+  - **Proyecto real**: Este mismo sitio de documentación
+
 ### 🌐 Desarrollo Web
 Aplicaciones web completas que aprovechan las capacidades de Claude Code.
 
