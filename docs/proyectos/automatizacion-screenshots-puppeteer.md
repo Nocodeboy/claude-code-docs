@@ -1,91 +1,46 @@
-# Deployment en Vercel y Gestión de Imágenes
+# Automatización de Screenshots con Puppeteer
 
-**Proyecto complementario**: Cómo hacer deploy de tu documentación Docusaurus en Vercel y añadir screenshots/imágenes de forma profesional.
+**Proyecto complementario**: Integrar Puppeteer en Docusaurus para automatizar capturas de pantalla profesionales del proyecto funcionando.
 
 ## 📋 Resumen del proyecto
 
-Este segundo proyecto complementa al **Centro de Documentación** mostrando cómo:
-- Deployar en Vercel desde GitHub (automático)
-- Estructurar imágenes en Docusaurus
-- Añadir screenshots y capturas de pantalla
-- Optimizar imágenes para documentación
-- Configurar dominio personalizado
+Este proyecto complementa al **Centro de Documentación** mostrando la implementación real de:
+- **Puppeteer** integrado en proyecto Docusaurus
+- **Script automatizado** para capturar screenshots
+- **Estructura profesional** de imágenes
+- **NPM scripts** para workflow automático
+- **Screenshots perfectos** de páginas funcionando
 
-### 🎯 Objetivos del proyecto
-- ✅ Deploy automático en Vercel
-- ✅ Estructura organizativa de imágenes
-- ✅ Screenshots del proyecto funcionando
-- ✅ Optimización para carga rápida
-- ✅ Dominio personalizado (opcional)
+### 🎯 Objetivos logrados
+- ✅ Puppeteer instalado y configurado
+- ✅ Script automático funcionando (`npm run screenshots`)
+- ✅ 5 screenshots capturados automáticamente
+- ✅ Estructura de imágenes organizada
+- ✅ Documentación actualizada con imágenes reales
 
-## 🚀 Parte 1: Deployment en Vercel
+## 🛠️ Stack tecnológico implementado
 
-### Método 1: Desde la interfaz web (Recomendado)
+- **Base**: Docusaurus v3 funcionando
+- **Puppeteer**: v24.17.0 para automatización
+- **Node.js**: Versión 18+ (requerida)
+- **Scripts**: NPM para workflow automático
+- **Resolución**: 1920x1080 full-page screenshots
 
-#### Paso 1: Acceder a Vercel
+## 📸 Paso 1: Instalación de Puppeteer
+
+### Comando de Claude Code usado
 ```bash
-claude "Abre mi navegador y ve a vercel.com"
+claude "Instala Puppeteer como dependencia de desarrollo para automatizar screenshots del proyecto"
 ```
 
-#### Paso 2: Conectar con GitHub
-1. Haz clic en **"New Project"**
-2. Selecciona **"Import Git Repository"**
-3. Conecta tu cuenta de GitHub si no lo has hecho
-4. Busca el repositorio **`claude-code-docs`**
-
-#### Paso 3: Configuración automática
-Vercel detectará automáticamente:
-- **Framework**: Docusaurus
-- **Build Command**: `npm run build`
-- **Output Directory**: `build`
-- **Install Command**: `npm install`
-
-#### Paso 4: Deploy
-- Haz clic en **"Deploy"**
-- Vercel creará la URL automáticamente
-- El proceso toma aproximadamente 2-3 minutos
-
-### Método 2: Desde CLI
-
-#### Instalación y login
+### Instalación real ejecutada
 ```bash
-# Instalar Vercel CLI globalmente
-npm install -g vercel
-
-# Login (abrirá el navegador)
-vercel login
-
-# Deploy desde el directorio del proyecto
-vercel --prod
+npm install --save-dev puppeteer
 ```
 
-#### Comandos de Claude Code para CLI
-```bash
-claude "Instala Vercel CLI y haz deploy de mi proyecto de documentación"
-```
+**Resultado**: Puppeteer v24.17.0 añadido al `package.json`
 
-### Configuración avanzada con vercel.json
-
-Ya tenemos el archivo `vercel.json` configurado:
-```json
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "build", 
-  "installCommand": "npm install",
-  "framework": "docusaurus",
-  "devCommand": "npm start",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
-```
-
-## 📸 Parte 2: Gestión de Imágenes en Docusaurus
-
-### Estructura de carpetas de imágenes
+## 📁 Paso 2: Estructura de carpetas para imágenes
 
 ```
 static/
@@ -135,31 +90,50 @@ claude "Crea versiones responsive de las imágenes del proyecto (móvil, tablet,
 </div>
 ```
 
-## 🔧 Comandos específicos usados
+## 💻 Paso 3: Creación del script de automatización
 
-### Para deployment
+### Comando de Claude Code usado
 ```bash
-claude "Configura el deployment automático de mi proyecto Docusaurus en Vercel con dominio personalizado"
+claude "Crea un script completo de Puppeteer que tome screenshots automáticos de todas las páginas principales del sitio"
 ```
 
-### Para screenshots
-```bash
-claude "Crea un script que tome screenshots automáticos de las páginas principales de mi sitio"
+### Script implementado: `scripts/take-screenshots.js`
+
+## 🎯 Paso 4: Configuración de NPM Script
+
+### Actualización de package.json
+```json
+{
+  "scripts": {
+    "screenshots": "node scripts/take-screenshots.js"
+  }
+}
 ```
 
-### Para optimización
+## ✅ Paso 5: Ejecución y resultados
+
+### Comando ejecutado
 ```bash
-claude "Optimiza todas las imágenes del proyecto para web sin perder calidad visible"
+npm run screenshots
 ```
 
-## 📊 Resultados esperados
+### Output del script
+```
+🚀 Iniciando captura de screenshots...
+📸 Capturando: Página de inicio completa...
+✅ Guardado: homepage.png
+📸 Capturando: Sistema de blog...
+✅ Guardado: blog.png
+📸 Capturando: Página de documentación...
+✅ Guardado: documentation.png
+📸 Capturando: Sección de proyectos...
+✅ Guardado: projects.png
+📸 Capturando: Documentación del proyecto...
+✅ Guardado: project-detail.png
+🎯 Screenshots completados!
+```
 
-### URLs del proyecto deployado
-- **Vercel URL**: `https://claude-code-docs.vercel.app` (automática)
-- **Dominio personalizado**: `claude-code-docs.com` (opcional)
-- **GitHub Pages**: Como alternativa a Vercel
-
-### Screenshots añadidos al proyecto original
+### Screenshots generados automáticamente
 1. **Homepage completa** - Mostrando las 6 secciones principales
 2. **Blog funcionando** - Lista de artículos y artículo individual
 3. **Navegación** - Sidebar y estructura de documentos

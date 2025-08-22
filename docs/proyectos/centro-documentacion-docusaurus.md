@@ -121,12 +121,84 @@ academynocode-docs/
 
 **Tiempo total**: ~35 minutos de desarrollo activo
 
+## 🚀 Deployment completo en Vercel
+
+### Paso 1: Preparación del código
+```bash
+claude "Prepara este proyecto para deployment añadiendo configuración de Vercel"
+```
+
+**Resultado**: Archivo `vercel.json` creado automáticamente:
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
+  "framework": "docusaurus",
+  "devCommand": "npm start",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+### Paso 2: Repositorio en GitHub
+```bash
+claude "Crea el repositorio en GitHub y sube todo el código"
+```
+
+**Comandos ejecutados**:
+1. `git init` - Inicializar repositorio
+2. `gh repo create claude-code-docs --public` - Crear repo en GitHub
+3. `git add .` && `git commit` - Commit inicial con mensaje descriptivo
+4. `git push -u origin master` - Subir código
+
+**Resultado**: Repositorio público en https://github.com/Nocodeboy/claude-code-docs
+
+### Paso 3: Deploy automático en Vercel
+
+#### Método web (Recomendado - 2 minutos)
+1. **Ir a Vercel**: https://vercel.com
+2. **Login con GitHub**: Usar misma cuenta
+3. **New Project**: Seleccionar `claude-code-docs`
+4. **Deploy**: Vercel detecta Docusaurus automáticamente
+5. **¡Listo!**: URL automática generada
+
+#### Método CLI (Alternativo)
+```bash
+# Solo si necesitas configuración avanzada
+npx vercel login
+npx vercel --prod
+```
+
+### Resultados del deployment
+- **Build time**: ~2-3 minutos
+- **URL automática**: `https://claude-code-docs.vercel.app`
+- **SSL**: HTTPS automático
+- **Deploy automático**: En cada push a master
+- **Configuración**: Zero-config gracias a detección automática
+
+### Comandos de Claude Code para deployment
+```bash
+# Para setup completo
+claude "Configura este proyecto para deployment automático en Vercel con GitHub"
+
+# Para verificar deployment
+claude "Verifica que el deployment esté funcionando correctamente y muestra las métricas"
+
+# Para configurar dominio personalizado (opcional)
+claude "Configura un dominio personalizado para el deployment de Vercel"
+```
+
 ## 📊 Resultados obtenidos
 
 ### Links del proyecto
 - **Repositorio**: https://github.com/Nocodeboy/claude-code-docs
 - **Desarrollo local**: http://localhost:3011
-- **Producción**: [Deploy en Vercel siguiendo las instrucciones del segundo proyecto]
+- **Producción**: `https://claude-code-docs.vercel.app` (deploy automático configurado)
 
 ### Screenshots del proyecto
 
