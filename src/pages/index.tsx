@@ -146,6 +146,61 @@ function HomepageFeatures() {
   );
 }
 
+function HomepageShowcase() {
+  return (
+    <section className="padding-vert--lg" style={{backgroundColor: 'var(--ifm-color-emphasis-100)'}}>
+      <div className="container">
+        <div className="text--center margin-bottom--lg">
+          <Heading as="h2">Proyectos Reales en Funcionamiento</Heading>
+          <p style={{fontSize: '1.1rem', color: 'var(--ifm-color-emphasis-700)'}}>
+            Explora screenshots de proyectos reales desarrollados completamente con Claude Code
+          </p>
+        </div>
+        
+        <div className="row">
+          <div className="col col--6 margin-bottom--lg">
+            <div className="card" style={{height: '100%'}}>
+              <div className="card__image">
+                <img src="/img/projects/documentation-center/homepage.png" alt="Centro de Documentación" style={{borderRadius: '8px 8px 0 0'}} />
+              </div>
+              <div className="card__body">
+                <h3>Centro de Documentación</h3>
+                <p>Este mismo sitio web creado desde cero en 35 minutos usando Claude Code. Incluye homepage, blog, navegación y deployment automático.</p>
+              </div>
+              <div className="card__footer">
+                <Link className="button button--primary" to="/docs/proyectos/centro-documentacion-docusaurus">Ver Proyecto →</Link>
+              </div>
+            </div>
+          </div>
+          
+          <div className="col col--6 margin-bottom--lg">
+            <div className="card" style={{height: '100%'}}>
+              <div className="card__image">
+                <img src="/img/projects/documentation-center/blog.png" alt="Automatización Screenshots" style={{borderRadius: '8px 8px 0 0'}} />
+              </div>
+              <div className="card__body">
+                <h3>Screenshots Automáticos</h3>
+                <p>Integración de Puppeteer para capturar automáticamente screenshots del proyecto. Script completo funcionando en <30 segundos.</p>
+              </div>
+              <div className="card__footer">
+                <Link className="button button--secondary" to="/docs/proyectos/automatizacion-screenshots-puppeteer">Ver Proyecto →</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text--center margin-top--lg">
+          <Link
+            className="button button--outline button--lg"
+            to="/docs/proyectos">
+            📚 Ver Todos los Proyectos
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -155,6 +210,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageShowcase />
       </main>
     </Layout>
   );

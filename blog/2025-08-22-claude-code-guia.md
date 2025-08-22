@@ -10,6 +10,9 @@ date: 2025-08-22
 
 Claude Code es el CLI agentic oficial de Anthropic. Esta guía contiene información verificada y actualizada para agosto de 2025.
 
+![Centro de Documentación Claude Code](/img/projects/documentation-center/homepage.png)
+*Vista del centro de documentación que hemos creado usando Claude Code*
+
 <!--truncate-->
 
 ## ¿Qué es Claude Code?
@@ -36,6 +39,9 @@ claude
 ```
 
 ## Características principales
+
+![Documentación estructurada](/img/projects/documentation-center/documentation.png)
+*Ejemplo de documentación creada automáticamente con Claude Code*
 
 1. **Comprensión agentic**: Mapea tu codebase automáticamente
 2. **Edición directa**: Modifica archivos con permisos explícitos  
@@ -66,6 +72,17 @@ claude update                      # Actualizar versión
 - **Claude Max 5x**: $100/mes  
 - **Claude Max 20x**: $200/mes
 - **Teams/Enterprise**: Planes corporativos
+
+## Proyectos reales con Claude Code
+
+![Proyectos documentados](/img/projects/documentation-center/projects.png)
+*Catálogo de proyectos reales desarrollados con Claude Code*
+
+Puedes ver proyectos completos desarrollados con Claude Code en nuestro [centro de documentación](/docs/proyectos), incluyendo:
+
+- **Centro de documentación completo** (este mismo sitio)
+- **Automatización de screenshots** con Puppeteer
+- **Deployment automático** en Vercel
 
 ## Enlaces oficiales
 

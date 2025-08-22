@@ -2,6 +2,9 @@
 
 **Proyecto complementario**: Integrar Puppeteer en Docusaurus para automatizar capturas de pantalla profesionales del proyecto funcionando.
 
+![Blog con screenshots automáticos](/img/projects/documentation-center/blog.png)
+*El blog del centro de documentación mostrando artículos con imágenes automáticas*
+
 ## 📋 Resumen del proyecto
 
 Este proyecto complementa al **Centro de Documentación** mostrando la implementación real de:
@@ -134,10 +137,22 @@ npm run screenshots
 ```
 
 ### Screenshots generados automáticamente
-1. **Homepage completa** - Mostrando las 6 secciones principales
-2. **Blog funcionando** - Lista de artículos y artículo individual
-3. **Navegación** - Sidebar y estructura de documentos
-4. **Proyecto documentado** - Esta misma documentación funcionando
+
+#### 📸 Resultados visuales obtenidos:
+
+![Homepage capturada automáticamente](/img/projects/documentation-center/homepage.png)
+*1. Homepage completa con las 6 secciones principales*
+
+![Documentación estructurada](/img/projects/documentation-center/documentation.png)
+*2. Sistema de documentación con navegación lateral*
+
+![Catálogo de proyectos](/img/projects/documentation-center/projects.png) 
+*3. Sección de proyectos organizados por categorías*
+
+![Esta documentación meta](/img/projects/documentation-center/project-detail.png)
+*4. Meta: La documentación de cómo automatizamos las capturas*
+
+### ✨ **Resultado final**: 5 screenshots perfectos capturados en <30 segundos
 
 ## 🎯 Lecciones aprendidas
 
