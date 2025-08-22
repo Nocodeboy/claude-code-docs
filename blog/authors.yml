@@ -1,0 +1,5 @@
+claude-code-docs:
+  name: Claude Code Docs
+  title: Documentación Claude Code
+  url: https://claude-code-docs.netlify.app
+  image_url: https://github.com/anthropics.png
