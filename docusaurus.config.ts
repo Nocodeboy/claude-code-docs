@@ -76,6 +76,7 @@ const config: Config = {
         width: 32,
         height: 32,
       },
+      hideOnScroll: true,
       items: [
         {to: '/explorer', label: '🔍 Explorador', position: 'left'},
         {
@@ -131,7 +132,7 @@ const config: Config = {
           items: [
             {
               label: 'Desarrollo Web',
-              to: '/docs/casos-uso/desarrollo-web',
+              to: '/docs/casos-uso',
             },
             {
               label: 'Automatización',
@@ -143,7 +144,7 @@ const config: Config = {
             },
             {
               label: 'Data Science',
-              to: '/docs/casos-uso/data-science',
+              to: '/docs/casos-uso',
             },
           ],
         },
@@ -220,8 +221,8 @@ const config: Config = {
       id: 'academy-nocode-claude-code',
       content:
         '🚀 ¡Bienvenido a Academy NoCode! Aprende Claude Code con Germán Huertas.',
-      backgroundColor: '#fff3e0',
-      textColor: '#e65100',
+      backgroundColor: '#ff5722',
+      textColor: '#ffffff',
       isCloseable: true,
     },
   } satisfies Preset.ThemeConfig,
