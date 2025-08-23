@@ -16,7 +16,10 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "screenshots": "node scripts/take-screenshots.js"
+    "screenshots": "node scripts/take-screenshots.js",
+    "screenshots:local": "node scripts/take-screenshots.js local",
+    "screenshots:external": "node scripts/take-screenshots.js external",
+    "screenshots:help": "node scripts/take-screenshots.js help"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

@@ -1,0 +1,911 @@
+---
+title: "Desarrollo con IA usando Claude Code"
+description: "Casos de uso completos para integrar Claude Code en proyectos de inteligencia artificial con ejemplos prácticos"
+sidebar_position: 1
+---
+
+# Desarrollo con IA usando Claude Code
+
+Claude Code no solo es una herramienta para programar, sino también una plataforma poderosa para desarrollar aplicaciones que integran inteligencia artificial. Esta guía presenta casos de uso reales con código completo y mejores prácticas.
+
+## Casos de Uso Principales
+
+### 1. Chatbot Inteligente con Context Memory
+
+Construye un chatbot que mantiene contexto conversacional y se integra con bases de datos y APIs externas.
+
+#### Estructura del Proyecto
+
+```bash
+claude "Crea la estructura para un chatbot inteligente con las siguientes características:
+- Memory persistente de conversaciones
+- Integración con base de datos
+- API REST para interacciones
+- Sistema de plugins para extender funcionalidades
+- Dashboard de análisis"
+```
+
+#### Implementación Backend (Node.js + TypeScript)
+
+```typescript
+// src/services/ChatbotService.ts
+export class ChatbotService {
+  private conversationMemory: Map<string, ConversationContext> = new Map();
+  private claudeClient: Claude;
+
+  constructor() {
+    this.claudeClient = new Claude({
+      apiKey: process.env.CLAUDE_API_KEY,
+      model: 'claude-3-5-sonnet-20241022'
+    });
+  }
+
+  async processMessage(
+    userId: string, 
+    message: string, 
+    context?: any
+  ): Promise<ChatResponse> {
+    // Recuperar contexto de la conversación
+    const conversation = this.getConversation(userId);
+    
+    // Construir prompt con contexto completo
+    const prompt = this.buildContextualPrompt(message, conversation, context);
+    
+    // Enviar a Claude con contexto enriquecido
+    const response = await this.claudeClient.complete({
+      prompt,
+      max_tokens: 1000,
+      temperature: 0.7
+    });
+
+    // Actualizar memoria conversacional
+    this.updateConversationMemory(userId, message, response.content);
+    
+    // Procesar respuesta y extraer acciones
+    return this.processResponse(response.content);
+  }
+
+  private buildContextualPrompt(
+    message: string, 
+    conversation: ConversationContext,
+    externalContext?: any
+  ): string {
+    return `
+Eres un asistente inteligente especializado. 
+
+Contexto de la conversación:
+${conversation.getRecentMessages().map(m => `${m.role}: ${m.content}`).join('\n')}
+
+Información del usuario:
+- ID: ${conversation.userId}
+- Preferencias: ${JSON.stringify(conversation.preferences)}
+- Historial relevante: ${conversation.getRelevantHistory()}
+
+${externalContext ? `Contexto adicional: ${JSON.stringify(externalContext)}` : ''}
+
+Mensaje actual del usuario: ${message}
+
+Responde de manera contextual y útil, considerando toda la información disponible.
+Si necesitas realizar acciones específicas, indica las acciones en formato JSON al final.
+`;
+  }
+}
+```
+
+#### Frontend Interactivo (React + TypeScript)
+
+```typescript
+// src/components/ChatInterface.tsx
+import React, { useState, useEffect, useRef } from 'react';
+import { ChatMessage, useChatbot } from '../hooks/useChatbot';
+
+export const ChatInterface: React.FC = () => {
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  const { sendMessage, getConversationHistory } = useChatbot();
+
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+
+    const userMessage: ChatMessage = {
+      id: Date.now().toString(),
+      content: input,
+      role: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const response = await sendMessage(input);
+      
+      const botMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        content: response.content,
+        role: 'assistant',
+        timestamp: new Date(),
+        actions: response.actions
+      };
+
+      setMessages(prev => [...prev, botMessage]);
+      
+      // Ejecutar acciones si las hay
+      if (response.actions && response.actions.length > 0) {
+        await executeActions(response.actions);
+      }
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
+      // Manejar error...
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="flex flex-col h-screen bg-gray-100">
+      {/* Header */}
+      <header className="bg-white shadow-sm p-4 border-b">
+        <h1 className="text-xl font-semibold">AI Assistant</h1>
+      </header>
+
+      {/* Messages Area */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {messages.map((message) => (
+          <MessageBubble 
+            key={message.id} 
+            message={message}
+            onActionExecute={executeActions}
+          />
+        ))}
+        {isLoading && <TypingIndicator />}
+        <div ref={messagesEndRef} />
+      </div>
+
+      {/* Input Area */}
+      <form onSubmit={handleSendMessage} className="p-4 bg-white border-t">
+        <div className="flex space-x-2">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Escribe tu mensaje..."
+            className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            disabled={isLoading}
+          />
+          <button
+            type="submit"
+            disabled={isLoading || !input.trim()}
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+```
+
+### 2. Sistema de Análisis de Código con IA
+
+Desarrolla una herramienta que analiza código usando Claude y proporciona insights detallados.
+
+#### Analizador de Código
+
+```python
+# code_analyzer.py
+import ast
+import os
+from typing import Dict, List, Any
+from claude_client import ClaudeClient
+
+class CodeAnalyzer:
+    def __init__(self, claude_api_key: str):
+        self.claude = ClaudeClient(api_key=claude_api_key)
+        self.supported_extensions = {'.py', '.js', '.ts', '.jsx', '.tsx'}
+    
+    async def analyze_project(self, project_path: str) -> Dict[str, Any]:
+        """Analiza un proyecto completo y genera reporte detallado"""
+        
+        files = self._discover_files(project_path)
+        analysis_results = {}
+        
+        for file_path in files:
+            print(f"Analizando: {file_path}")
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Análisis estático básico
+            static_analysis = self._static_analysis(content, file_path)
+            
+            # Análisis con Claude
+            claude_analysis = await self._claude_analysis(content, file_path)
+            
+            analysis_results[file_path] = {
+                'static': static_analysis,
+                'ai_insights': claude_analysis,
+                'file_info': {
+                    'size': len(content),
+                    'lines': len(content.split('\n')),
+                    'language': self._detect_language(file_path)
+                }
+            }
+        
+        # Generar reporte consolidado
+        project_summary = await self._generate_project_summary(analysis_results)
+        
+        return {
+            'files': analysis_results,
+            'summary': project_summary,
+            'recommendations': await self._generate_recommendations(analysis_results)
+        }
+    
+    async def _claude_analysis(self, code: str, file_path: str) -> Dict[str, Any]:
+        """Análisis detallado usando Claude"""
+        
+        prompt = f"""
+Analiza este código de manera detallada y profesional:
+
+Archivo: {{file_path}}
+Código:
+```
+{{code}}
+```
+
+Proporciona un análisis estructurado en JSON con:
+
+1. "quality_score": Puntaje de calidad del 1-10
+2. "strengths": Lista de fortalezas del código
+3. "issues": Lista de problemas identificados (cada uno con severidad: low/medium/high)
+4. "security_concerns": Posibles vulnerabilidades de seguridad
+5. "performance_insights": Análisis de rendimiento y optimizaciones sugeridas
+6. "maintainability": Análisis de mantenibilidad y legibilidad
+7. "best_practices": Adherencia a mejores prácticas
+8. "refactor_suggestions": Sugerencias específicas de refactoring
+9. "complexity_analysis": Análisis de complejidad ciclomática y cognitiva
+10. "documentation_quality": Evaluación de comentarios y documentación
+
+Responde SOLO con el JSON, sin texto adicional.
+"""
+        
+        response = await self.claude.complete(
+            prompt=prompt,
+            max_tokens=2000,
+            temperature=0.1
+        )
+        
+        try:
+            return json.loads(response.content)
+        except json.JSONDecodeError:
+            return {"error": "Failed to parse Claude response", "raw": response.content}
+```
+
+### 3. Generador de Documentación Inteligente
+
+Crea documentación automática que se adapta al contexto y audiencia.
+
+#### Sistema de Documentación Automática
+
+```typescript
+// src/services/DocumentationGenerator.ts
+export class DocumentationGenerator {
+  private claude: ClaudeClient;
+  private codeAnalyzer: CodeAnalyzer;
+  
+  constructor(apiKey: string) {
+    this.claude = new ClaudeClient(apiKey);
+    this.codeAnalyzer = new CodeAnalyzer();
+  }
+
+  async generateProjectDocumentation(
+    projectPath: string,
+    options: DocumentationOptions
+  ): Promise<GeneratedDocs> {
+    
+    // Analizar estructura del proyecto
+    const projectStructure = await this.analyzeProjectStructure(projectPath);
+    
+    // Generar documentación por secciones
+    const sections = await Promise.all([
+      this.generateOverview(projectStructure, options),
+      this.generateArchitecture(projectStructure, options),
+      this.generateAPIDocumentation(projectStructure, options),
+      this.generateSetupGuide(projectStructure, options),
+      this.generateContributionGuide(projectStructure, options),
+      this.generateTroubleshooting(projectStructure, options)
+    ]);
+
+    // Consolidar y organizar
+    return this.consolidateDocumentation(sections, options);
+  }
+
+  private async generateOverview(
+    structure: ProjectStructure, 
+    options: DocumentationOptions
+  ): Promise<DocumentSection> {
+    
+    const prompt = `
+Genera una descripción general profesional para este proyecto de software:
+
+Información del proyecto:
+- Nombre: ${structure.name}
+- Tipo: ${structure.type}
+- Tecnologías principales: ${structure.mainTechnologies.join(', ')}
+- Estructura de carpetas: ${JSON.stringify(structure.folderStructure, null, 2)}
+- Package.json: ${JSON.stringify(structure.packageInfo, null, 2)}
+
+Audiencia objetivo: ${options.audience}
+Nivel técnico: ${options.technicalLevel}
+
+Genera un README.md con:
+
+1. Título y descripción concisa (2-3 líneas)
+2. Badges relevantes (build status, version, license)
+3. Características principales (lista con bullets)
+4. Screenshots o demos (placeholders)
+5. Tabla de tecnologías usadas
+6. Quick start guide (pasos básicos)
+7. Estructura del proyecto explicada
+8. Roadmap (si es relevante)
+9. Licencia y contribuciones
+
+Usa markdown profesional y incluye emojis apropiados.
+Adapta el lenguaje al nivel técnico especificado: ${options.technicalLevel}
+`;
+
+    const response = await this.claude.complete({
+      prompt,
+      max_tokens: 2000,
+      temperature: 0.3
+    });
+
+    return {
+      title: 'Overview',
+      content: response.content,
+      type: 'markdown'
+    };
+  }
+}
+
+// Interfaz para opciones de documentación
+interface DocumentationOptions {
+  audience: 'developers' | 'end-users' | 'stakeholders';
+  technicalLevel: 'beginner' | 'intermediate' | 'advanced';
+  includeCode: boolean;
+  format: 'markdown' | 'html' | 'pdf';
+  language: 'es' | 'en';
+}
+```
+
+### 4. Sistema de Testing Inteligente
+
+Genera tests automáticamente basándose en el análisis del código.
+
+#### Generador de Tests
+
+```python
+# test_generator.py
+class IntelligentTestGenerator:
+    def __init__(self, claude_api_key: str):
+        self.claude = ClaudeClient(api_key=claude_api_key)
+    
+    async def generate_comprehensive_tests(
+        self, 
+        source_file: str, 
+        test_framework: str = 'jest'
+    ) -> Dict[str, str]:
+        """Genera suite completa de tests para un archivo"""
+        
+        with open(source_file, 'r') as f:
+            source_code = f.read()
+        
+        # Analizar el código para identificar funciones y clases
+        functions = self._extract_functions(source_code)
+        classes = self._extract_classes(source_code)
+        
+        test_files = {}
+        
+        # Generar tests para cada función
+        for func in functions:
+            test_content = await self._generate_function_tests(
+                func, source_code, test_framework
+            )
+            test_files[f"{func['name']}.test.{self._get_extension(test_framework)}"] = test_content
+        
+        # Generar tests para cada clase
+        for cls in classes:
+            test_content = await self._generate_class_tests(
+                cls, source_code, test_framework
+            )
+            test_files[f"{cls['name']}.test.{self._get_extension(test_framework)}"] = test_content
+        
+        # Generar tests de integración
+        integration_tests = await self._generate_integration_tests(
+            source_code, test_framework
+        )
+        test_files[f"integration.test.{self._get_extension(test_framework)}"] = integration_tests
+        
+        return test_files
+    
+    async def _generate_function_tests(
+        self, 
+        function_info: Dict, 
+        source_code: str, 
+        framework: str
+    ) -> str:
+        """Genera tests específicos para una función"""
+        
+        prompt = f"""
+Analiza esta función y genera tests unitarios completos usando {{framework}}:
+
+Código fuente completo:
+```
+{{source_code}}
+```
+
+Función específica a testear:
+```
+{function_info['code']}
+```
+
+Información de la función:
+- Nombre: {function_info['name']}
+- Parámetros: {function_info.get('parameters', [])}
+- Tipo de retorno: {function_info.get('return_type', 'unknown')}
+
+Genera tests que cubran:
+
+1. **Happy Path Tests**: Casos donde todo funciona correctamente
+2. **Edge Cases**: Valores límite, arrays vacíos, null, undefined
+3. **Error Handling**: Entradas inválidas, excepciones esperadas
+4. **Boundary Tests**: Valores en los límites de rangos válidos
+5. **Integration Tests**: Si la función interactúa con otros módulos
+6. **Performance Tests**: Si es relevante para la función
+7. **Mocking**: Para dependencias externas (APIs, base de datos, etc.)
+
+Estructura el archivo de test con:
+- Imports necesarios
+- Setup/teardown hooks
+- Describe blocks organizados por funcionalidad
+- Tests descriptivos con nombres claros
+- Assertions específicas y útiles
+- Comentarios explicativos para tests complejos
+
+Usa mocking apropiado para:
+- Llamadas a APIs externas
+- Acceso a base de datos
+- File system operations
+- Timers/fechas
+- Dependencias de terceros
+
+Incluye tests de performance si la función:
+- Procesa arrays grandes
+- Hace cálculos intensivos
+- Maneja operaciones asíncronas
+
+Formato: Código {{framework}} completo y ejecutable.
+"""
+
+        response = await self.claude.complete({
+            prompt=prompt,
+            max_tokens=2500,
+            temperature=0.1
+        })
+        
+        return response.content
+```
+
+## Mejores Prácticas para Desarrollo con IA
+
+### 1. Gestión de Contexto en Aplicaciones IA
+
+```typescript
+// Context management for AI applications
+class AIContextManager {
+  private contextStore: Map<string, ContextData> = new Map();
+  private maxContextSize = 100000; // tokens
+  
+  addContext(sessionId: string, data: ContextData): void {
+    const existing = this.contextStore.get(sessionId) || { messages: [], metadata: {} };
+    
+    // Merge new context while respecting size limits
+    const updated = this.mergeContext(existing, data);
+    const trimmed = this.trimContext(updated);
+    
+    this.contextStore.set(sessionId, trimmed);
+  }
+  
+  private trimContext(context: ContextData): ContextData {
+    // Implement smart context trimming
+    // Keep most recent messages and important metadata
+    
+    if (this.estimateTokens(context) <= this.maxContextSize) {
+      return context;
+    }
+    
+    // Prioritize recent messages and high-importance content
+    const sortedMessages = context.messages.sort((a, b) => {
+      const aScore = this.calculateImportanceScore(a);
+      const bScore = this.calculateImportanceScore(b);
+      return bScore - aScore;
+    });
+    
+    let tokens = 0;
+    const kept = [];
+    
+    for (const message of sortedMessages) {
+      const messageTokens = this.estimateTokens(message);
+      if (tokens + messageTokens <= this.maxContextSize) {
+        kept.push(message);
+        tokens += messageTokens;
+      }
+    }
+    
+    return {
+      messages: kept.sort((a, b) => a.timestamp - b.timestamp),
+      metadata: context.metadata
+    };
+  }
+}
+```
+
+### 2. Error Handling en Aplicaciones IA
+
+```typescript
+// Robust error handling for AI applications
+class AIErrorHandler {
+  async handleAIRequest<T>(
+    operation: () => Promise<T>,
+    fallback?: () => Promise<T>
+  ): Promise<T> {
+    const maxRetries = 3;
+    let attempt = 0;
+    
+    while (attempt < maxRetries) {
+      try {
+        return await this.executeWithTimeout(operation, 30000);
+      } catch (error) {
+        attempt++;
+        
+        if (this.isRetryableError(error)) {
+          const delay = this.calculateBackoffDelay(attempt);
+          await this.sleep(delay);
+          continue;
+        }
+        
+        // Non-retryable error, try fallback
+        if (fallback) {
+          try {
+            return await fallback();
+          } catch (fallbackError) {
+            throw new AIError(
+              `Primary operation failed: ${error.message}. Fallback also failed: ${fallbackError.message}`
+            );
+          }
+        }
+        
+        throw new AIError(`AI operation failed after ${attempt} attempts: ${error.message}`);
+      }
+    }
+    
+    throw new AIError(`AI operation failed after ${maxRetries} retries`);
+  }
+  
+  private isRetryableError(error: any): boolean {
+    // Define which errors are worth retrying
+    const retryableErrors = [
+      'RATE_LIMIT',
+      'NETWORK_ERROR',
+      'TIMEOUT',
+      'TEMPORARY_UNAVAILABLE'
+    ];
+    
+    return retryableErrors.some(errorType => 
+      error.code === errorType || error.message.includes(errorType)
+    );
+  }
+}
+```
+
+## Casos de Uso Avanzados
+
+### 5. Sistema de Code Review Automatizado
+
+```python
+# automated_code_review.py
+class AutomatedCodeReviewer:
+    def __init__(self, claude_api_key: str):
+        self.claude = ClaudeClient(api_key=claude_api_key)
+        self.review_templates = self._load_review_templates()
+    
+    async def review_pull_request(self, pr_data: PullRequestData) -> CodeReviewReport:
+        """Revisa automáticamente un pull request"""
+        
+        # Analizar cambios
+        changed_files = pr_data.get_changed_files()
+        review_results = []
+        
+        for file_path, changes in changed_files.items():
+            file_review = await self._review_file_changes(file_path, changes)
+            review_results.append(file_review)
+        
+        # Análisis arquitectónico
+        architecture_review = await self._review_architecture_impact(pr_data)
+        
+        # Generar reporte consolidado
+        return self._generate_review_report(review_results, architecture_review, pr_data)
+    
+    async def _review_file_changes(self, file_path: str, changes: FileChanges) -> FileReview:
+        prompt = f"""
+Revisa estos cambios de código como un senior developer experimentado:
+
+Archivo: {{file_path}}
+
+Código antes:
+```
+{changes.before}
+```
+
+Código después:
+```
+{changes.after}
+```
+
+Diff:
+```
+{changes.diff}
+```
+
+Evalúa los cambios considerando:
+
+1. **Funcionalidad**: ¿Los cambios cumplen el objetivo sin introducir bugs?
+2. **Calidad**: ¿El código mantiene o mejora la calidad general?
+3. **Performance**: ¿Hay impacto en el rendimiento? ¿Optimizaciones posibles?
+4. **Seguridad**: ¿Los cambios introducen vulnerabilidades?
+5. **Mantenibilidad**: ¿El código es fácil de entender y modificar?
+6. **Testing**: ¿Se necesitan tests adicionales?
+7. **Documentación**: ¿Se requiere documentación adicional?
+
+Responde en JSON con:
+- "overall_rating": 1-10
+- "issues": [{"type": "bug|style|performance|security", "severity": "low|medium|high", "description": "...", "line": número, "suggestion": "..."}]
+- "positive_aspects": ["..."]
+- "required_actions": ["..."]
+- "suggested_improvements": ["..."]
+"""
+        
+        response = await self.claude.complete({
+            prompt=prompt,
+            max_tokens=1500,
+            temperature=0.1
+        })
+        
+        return FileReview.from_json(response.content)
+```
+
+### 6. Optimizador de Prompts con Machine Learning
+
+```typescript
+// prompt_optimizer.ts
+export class PromptOptimizer {
+  private performanceHistory: Map<string, PromptPerformance[]> = new Map();
+  private claude: ClaudeClient;
+  
+  constructor(apiKey: string) {
+    this.claude = new ClaudeClient(apiKey);
+  }
+  
+  async optimizePrompt(
+    basePrompt: string, 
+    expectedOutput: string, 
+    context: PromptContext
+  ): Promise<OptimizedPrompt> {
+    
+    // Generar variaciones del prompt
+    const promptVariations = await this.generatePromptVariations(basePrompt, context);
+    
+    // Evaluar cada variación
+    const evaluationResults = await Promise.all(
+      promptVariations.map(prompt => this.evaluatePrompt(prompt, expectedOutput, context))
+    );
+    
+    // Seleccionar el mejor prompt
+    const bestPrompt = this.selectBestPrompt(evaluationResults);
+    
+    // Aprender de los resultados
+    await this.updateLearningModel(basePrompt, bestPrompt, evaluationResults);
+    
+    return bestPrompt;
+  }
+  
+  private async generatePromptVariations(
+    basePrompt: string, 
+    context: PromptContext
+  ): Promise<string[]> {
+    
+    const optimizationPrompt = `
+Genera 5 variaciones optimizadas de este prompt base:
+
+Prompt original:
+"${basePrompt}"
+
+Contexto:
+- Tipo de tarea: ${context.taskType}
+- Audiencia: ${context.audience}
+- Formato deseado: ${context.outputFormat}
+- Restricciones: ${JSON.stringify(context.constraints)}
+
+Para cada variación, aplica diferentes técnicas de optimización:
+1. Claridad de instrucciones
+2. Contexto adicional relevante
+3. Ejemplos específicos
+4. Estructura mejorada
+5. Lenguaje más preciso
+
+Responde con un array JSON de strings, cada uno siendo una variación del prompt.
+`;
+
+    const response = await this.claude.complete({
+      prompt: optimizationPrompt,
+      max_tokens: 1500,
+      temperature: 0.3
+    });
+    
+    try {
+      return JSON.parse(response.content);
+    } catch (error) {
+      console.error('Failed to parse prompt variations:', error);
+      return [basePrompt]; // fallback
+    }
+  }
+  
+  private async evaluatePrompt(
+    prompt: string, 
+    expectedOutput: string, 
+    context: PromptContext
+  ): Promise<PromptEvaluation> {
+    
+    const startTime = Date.now();
+    
+    try {
+      // Ejecutar prompt
+      const response = await this.claude.complete({
+        prompt,
+        max_tokens: context.maxTokens || 1000,
+        temperature: context.temperature || 0.1
+      });
+      
+      const executionTime = Date.now() - startTime;
+      
+      // Evaluar calidad de respuesta
+      const qualityScore = await this.evaluateResponseQuality(
+        response.content, 
+        expectedOutput, 
+        context
+      );
+      
+      return {
+        prompt,
+        response: response.content,
+        qualityScore,
+        executionTime,
+        tokenUsage: response.usage?.total_tokens || 0,
+        success: true
+      };
+      
+    } catch (error) {
+      return {
+        prompt,
+        response: '',
+        qualityScore: 0,
+        executionTime: Date.now() - startTime,
+        tokenUsage: 0,
+        success: false,
+        error: error.message
+      };
+    }
+  }
+}
+```
+
+## Integración con Herramientas Existentes
+
+### Integración con VS Code
+
+```typescript
+// vscode-extension/src/ai-features.ts
+export class AIFeatures {
+  private claude: ClaudeClient;
+  
+  constructor() {
+    this.claude = new ClaudeClient(
+      vscode.workspace.getConfiguration().get('claude.apiKey')
+    );
+  }
+  
+  async explainCode(editor: vscode.TextEditor): Promise<void> {
+    const selection = editor.selection;
+    const selectedText = editor.document.getText(selection);
+    
+    if (!selectedText) {
+      vscode.window.showErrorMessage('Por favor selecciona código para explicar');
+      return;
+    }
+    
+    const explanation = await this.claude.complete({
+      prompt: `Explica este código de manera clara y detallada:
+
+\`\`\`${this.getLanguageId(editor.document)}
+${selectedText}
+\`\`\`
+
+Incluye:
+1. Propósito del código
+2. Cómo funciona paso a paso
+3. Posibles mejoras
+4. Casos edge a considerar`,
+      max_tokens: 1000,
+      temperature: 0.1
+    });
+    
+    // Mostrar explicación en panel lateral
+    this.showExplanationPanel(explanation.content);
+  }
+  
+  async generateTests(editor: vscode.TextEditor): Promise<void> {
+    const document = editor.document;
+    const fullText = document.getText();
+    
+    const tests = await this.claude.complete({
+      prompt: `Genera tests unitarios completos para este código:
+
+\`\`\`${this.getLanguageId(document)}
+${fullText}
+\`\`\`
+
+Usa el framework de testing apropiado para el lenguaje.
+Incluye casos happy path, edge cases y error handling.`,
+      max_tokens: 2000,
+      temperature: 0.1
+    });
+    
+    // Crear nuevo archivo de test
+    const testFileName = this.generateTestFileName(document.fileName);
+    const testUri = vscode.Uri.file(testFileName);
+    
+    await vscode.workspace.fs.writeFile(
+      testUri, 
+      Buffer.from(tests.content, 'utf8')
+    );
+    
+    // Abrir archivo de test
+    const testDocument = await vscode.workspace.openTextDocument(testUri);
+    await vscode.window.showTextDocument(testDocument);
+  }
+}
+```
+
+## Próximos Pasos
+
+Con estos casos de uso de desarrollo con IA:
+
+1. **Implementa casos básicos** adaptados a tu proyecto específico
+2. **Experimenta con diferentes enfoques** de integración IA
+3. **Construye sistemas robustos** con manejo de errores apropiado
+4. **Mide y optimiza rendimiento** de tus aplicaciones IA
+5. **Explora integraciones avanzadas** con otras herramientas
+
+## Recursos Adicionales
+
+- 🤖 [Ejemplos Avanzados de IA](./ejemplos-avanzados)
+- 🔧 [Herramientas de Desarrollo IA](../../herramientas/ai-tools)
+- 📊 [Métricas y Monitoreo](../../recursos/metricas-ai)
+- 🧪 [Testing para Aplicaciones IA](./testing-ai-apps)
