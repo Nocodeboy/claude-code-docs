@@ -1,5 +1,15 @@
-claude-code-docs:
-  name: Claude Code Docs
-  title: Documentación Claude Code
-  url: https://claude-code-docs.netlify.app
-  image_url: https://github.com/anthropics.png
+german:
+  name: Germán Huertas
+  title: Fundador de Academy NoCode
+  url: https://academynocode.com
+  image_url: /img/logo.png
+  socials:
+    x: https://x.com/Nocodeboy
+    linkedin: https://www.linkedin.com/in/germán-huertas-piquero-b89a80b1/
+    github: https://github.com/Nocodeboy
+
+academy-nocode:
+  name: Academy NoCode
+  title: Centro de Aprendizaje Claude Code
+  url: https://claude-code-docs.vercel.app
+  image_url: /img/logo.png

@@ -61,7 +61,7 @@
 
 /* Hero section customization */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff3d00 0%, #ff5722 100%);
   color: white;
   text-align: center;
   padding: 4rem 0;
@@ -144,6 +144,35 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Fix navbar heading colors */
+.navbar__brand {
+  color: var(--ifm-navbar-link-color) !important;
+}
+
+.navbar__title {
+  color: var(--ifm-navbar-link-color) !important;
+}
+
+[data-theme='dark'] .navbar__brand,
+[data-theme='dark'] .navbar__title {
+  color: #f1f5f9 !important;
+}
+
+/* Mobile menu visibility fix */
+.navbar-sidebar {
+  z-index: 9999 !important;
+  background: var(--ifm-background-color) !important;
+}
+
+.navbar-sidebar__backdrop {
+  z-index: 9998 !important;
+}
+
+[data-theme='dark'] .navbar-sidebar {
+  background: #1f2937 !important;
+  border-right: 1px solid #374151;
+}
+
 /* Sidebar customization */
 .theme-doc-sidebar-container {
   border-right: 1px solid #e2e8f0;
@@ -160,8 +189,9 @@
 
 /* Footer */
 .footer {
-  background: #1f2937;
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
   color: #cbd5e1;
+  border-top: 1px solid rgba(255, 61, 0, 0.1);
 }
 
 .footer__title {
