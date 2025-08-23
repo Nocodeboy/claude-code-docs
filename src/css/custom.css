@@ -1,11 +1,11 @@
 /**
- * Academy NoCode Custom Styles
- * Docusaurus template with NoCode & IA branding
+ * Claude Code Documentation Center - Custom Styles
+ * Docusaurus template for Claude Code community documentation
  */
 
-/* Variables principales de Academy NoCode */
+/* Variables principales de Claude Code Documentation */
 :root {
-  /* Colores primarios - Academy NoCode brand */
+  /* Colores primarios - Claude Code Documentation brand */
   --ifm-color-primary: #6366f1;
   --ifm-color-primary-dark: #4f46e5;
   --ifm-color-primary-darker: #4338ca;
@@ -20,11 +20,15 @@
   --ifm-color-warning: #f59e0b;
   --ifm-color-danger: #ef4444;
   
-  /* Typography */
+  /* Typography - Improved hierarchy */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ifm-heading-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ifm-font-weight-semibold: 600;
   --ifm-font-weight-bold: 700;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-line-height-base: 1.6;
   
   /* Code */
   --ifm-code-font-size: 95%;
@@ -74,12 +78,23 @@
   margin-bottom: 2rem;
 }
 
-/* Button styles */
+/* Button styles - Improved hierarchy */
 .button {
   border-radius: 0.5rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   transition: all 0.2s ease-in-out;
+}
+
+.button--primary {
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+}
+
+.button--secondary {
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
 }
 
 .button:hover {
@@ -162,7 +177,7 @@
 
 /* Emoji styles for features */
 .feature-emoji {
-  font-size: 4rem;
+  font-size: 2.5rem; /* Reduced from 4rem for better visual hierarchy */
   margin-bottom: 1rem;
   display: block;
 }
@@ -252,4 +267,46 @@
 
 [data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
   background: #64748b;
+}
+
+/* Accessibility improvements */
+.button:focus,
+.searchInput:focus,
+.filterBtn:focus {
+  outline: 3px solid var(--ifm-color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Better color contrast */
+:root {
+  --ifm-color-emphasis-600: #374151; /* Darker for better contrast */
+  --ifm-color-emphasis-700: #1f2937;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .docCard {
+    border-width: 2px;
+  }
+  
+  .button {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .button:hover {
+    transform: none;
+  }
+  
+  .animate-fade-in-up {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

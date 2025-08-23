@@ -52,6 +52,11 @@ async function takeScreenshots(customConfig = {}) {
           name: 'documentation',
           url: `${config.baseUrl}/docs/intro`,
           description: 'Página de documentación principal'
+        },
+        {
+          name: 'explorer',
+          url: `${config.baseUrl}/explorer`,
+          description: 'Explorador de documentación interactivo'
         }
       ]
     },

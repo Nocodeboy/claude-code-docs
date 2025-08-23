@@ -13,20 +13,20 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          Claude Code Docs
+          Centro de Documentación Claude Code
         </Heading>
-        <p className="hero__subtitle">Tu fuente completa para dominar Claude Code 🚀</p>
+        <p className="hero__subtitle">Tu centro completo para dominar Claude Code - El CLI de IA de Anthropic 🚀</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/explorer"
             style={{marginRight: '10px'}}>
-            Comenzar Ahora
+            🔍 Explorar Documentación
           </Link>
           <Link
             className="button button--outline button--lg"
-            to="/docs/proyectos">
-            Ver Proyectos
+            to="/docs/intro">
+            📚 Empezar Tutorial
           </Link>
         </div>
       </div>
@@ -87,7 +87,7 @@ function HomepageFeatures() {
           {features.map((feature, idx) => (
             <div key={idx} className="col col--4 margin-bottom--lg">
               <div className="text--center">
-                <div style={{fontSize: '4rem', marginBottom: '1rem'}}>
+                <div style={{fontSize: '2.5rem', marginBottom: '1rem'}}>
                   {feature.emoji}
                 </div>
                 <Heading as="h3">{feature.title}</Heading>
@@ -105,9 +105,9 @@ function HomepageFeatures() {
         <div className="text--center margin-top--xl">
           <Heading as="h3">¿Qué es Claude Code?</Heading>
           <p style={{fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', marginBottom: '2rem'}}>
-            Claude Code es el CLI agentic de Anthropic que funciona directamente en tu terminal 
-            e IDE. Comprende codebases completos, edita archivos, ejecuta comandos y crea 
-            commits automáticamente a través de lenguaje natural.
+            Claude Code es el CLI oficial de Anthropic que revoluciona el desarrollo de software. 
+            Funciona directamente en tu terminal e IDE, comprende codebases completos, edita archivos, 
+            ejecuta comandos y crea commits automáticamente usando inteligencia artificial.
           </p>
           
           <div className="row">

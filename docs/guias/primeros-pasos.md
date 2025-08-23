@@ -8,6 +8,9 @@ description: "Tu primer proyecto con Claude Code - Tutorial paso a paso para pri
 
 ¡Felicidades por instalar Claude Code! En esta guía te llevaré paso a paso por tu primera experiencia con esta increíble herramienta.
 
+![Explorador de Documentación](../../static/img/screenshots/site/explorer.png)
+*Explora toda nuestra documentación de forma organizada e interactiva*
+
 ## 🎯 Lo que aprenderás
 
 - Cómo configurar tu primer proyecto

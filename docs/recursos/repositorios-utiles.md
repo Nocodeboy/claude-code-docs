@@ -8,6 +8,9 @@ description: "Colección curada de repositorios, templates y recursos para poten
 
 Esta es tu guía definitiva de recursos externos que te ayudarán a ser más productivo con Claude Code. Todos los recursos están verificados y activamente mantenidos.
 
+![Sección de Recursos](../../static/img/projects/documentation-center/resources.png)
+*Accede a todos los recursos organizados por categorías*
+
 ## 🌟 Recursos Esenciales
 
 ### Claude Code Templates (davila7)

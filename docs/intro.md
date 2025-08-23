@@ -4,6 +4,9 @@
 
 Este es tu recurso completo para dominar **Claude Code**, el CLI oficial de Anthropic que revoluciona la forma en que desarrollamos software con inteligencia artificial.
 
+![Documentación Principal](../static/img/projects/documentation-center/documentation.png)
+*Interfaz principal de la documentación organizada por categorías*
+
 ## ¿Qué es Claude Code?
 
 **Claude Code** es el CLI agentic oficial de Anthropic que te permite:

@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Claude Code - Centro de Documentación',
-  tagline: 'Tu fuente completa para dominar Claude Code',
+  title: 'Centro de Documentación Claude Code',
+  tagline: 'Tu centro completo para dominar Claude Code - El CLI de IA de Anthropic',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -75,6 +75,7 @@ const config: Config = {
         src: 'img/claude-code-logo.svg',
       },
       items: [
+        {to: '/explorer', label: '🔍 Explorador', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',

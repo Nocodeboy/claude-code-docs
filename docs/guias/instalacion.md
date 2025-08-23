@@ -8,6 +8,9 @@ description: "Guía completa para instalar Claude Code paso a paso en tu sistema
 
 ¡Bienvenido a la guía completa de instalación de Claude Code! En esta guía aprenderás a instalar y configurar Claude Code correctamente en tu sistema.
 
+![Centro de Documentación Claude Code](../../static/img/projects/documentation-center/homepage.png)
+*Centro de Documentación Claude Code - Tu fuente completa para dominar el CLI de IA de Anthropic*
+
 ## 🎯 ¿Qué es Claude Code?
 
 **Claude Code** es el CLI (Command Line Interface) oficial de Anthropic que permite:

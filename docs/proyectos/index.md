@@ -2,6 +2,9 @@
 
 Documentación completa de proyectos reales desarrollados usando **Claude Code**. Cada proyecto incluye código fuente, explicaciones detalladas, lecciones aprendidas y recursos para replicar la implementación.
 
+![Sección de Proyectos](../../static/img/projects/documentation-center/projects.png)
+*Explora todos los proyectos desarrollados con Claude Code*
+
 ## 🎯 Objetivos de esta sección
 
 - **Mostrar implementaciones reales** de Claude Code en diferentes contextos
