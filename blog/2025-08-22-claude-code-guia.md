@@ -80,9 +80,9 @@ claude update                      # Actualizar versión
 
 Puedes ver proyectos completos desarrollados con Claude Code en nuestro [centro de documentación](/docs/proyectos), incluyendo:
 
-- **Centro de documentación completo** (este mismo sitio)
+- **Centro de documentación completo** (este mismo sitio) - [Ver en producción](https://claude-code-docs.vercel.app)
 - **Automatización de screenshots** con Puppeteer
-- **Deployment automático** en Vercel
+- **Deployment automático** en Vercel con GitHub
 
 ## Enlaces oficiales
 

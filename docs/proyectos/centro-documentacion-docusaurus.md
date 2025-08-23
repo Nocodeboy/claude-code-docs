@@ -203,7 +203,9 @@ claude "Configura un dominio personalizado para el deployment de Vercel"
 ### Links del proyecto
 - **Repositorio**: https://github.com/Nocodeboy/claude-code-docs
 - **Desarrollo local**: http://localhost:3011
-- **Producción**: `https://claude-code-docs.vercel.app` (deploy automático configurado)
+- **Producción**: https://claude-code-docs.vercel.app (deploy automático desde GitHub)
+
+> 🌐 **Deploy Status**: El sitio se deploya automáticamente en Vercel desde GitHub. Cada push a la rama `master` actualiza la producción inmediatamente.
 
 ### Screenshots del proyecto
 
