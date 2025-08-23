@@ -1,104 +1,87 @@
-# Claude Code - Centro de Documentación
+# Academy NoCode - Centro Claude Code 🧡
 
-Centro de documentación completo y especializado en **Claude Code**, el CLI oficial de Anthropic. Este proyecto recopila toda la información, proyectos, herramientas y recursos relacionados con Claude Code.
+Centro de documentación completo y especializado en **Claude Code** creado por **Germán Huertas**. El recurso más completo en español para dominar Claude Code, el CLI oficial de Anthropic.
 
-## 🎯 Objetivo
+![Academy NoCode](./static/img/logo.png)
 
-Crear el centro de documentación más completo sobre Claude Code, documentando:
-- **Proyectos desarrollados** con Claude Code
-- **Herramientas y utilidades** que funcionan con Claude Code
-- **Guías y tutoriales** paso a paso
-- **Recursos y templates** reutilizables
-- **Casos de uso** y mejores prácticas
-- **Troubleshooting** y solución de problemas
+🌐 **Sitio web**: [https://claude-code-docs.vercel.app](https://claude-code-docs.vercel.app)
+
+## 🎯 Sobre Academy NoCode
+
+**Academy NoCode** es el centro educativo liderado por **Germán Huertas** que se especializa en enseñar desarrollo sin código y herramientas de IA como Claude Code. Este proyecto recopila toda la información, proyectos, herramientas y recursos necesarios para dominar Claude Code desde cero hasta nivel experto.
+
+### 👨‍💻 Sobre Germán Huertas
+- **𝕏 Twitter**: [@Nocodeboy](https://x.com/Nocodeboy)
+- **LinkedIn**: [Germán Huertas Piquero](https://www.linkedin.com/in/germán-huertas-piquero-b89a80b1/)
+- **Web**: [academynocode.com](https://academynocode.com)
+
+## 🎨 Características del Sitio
+
+### 🔍 Explorador Interactivo
+- **Búsqueda inteligente** con filtros por categoría y dificultad
+- **Navegación intuitiva** para encontrar contenido específico
+- **Cards organizadas** con metadata detallada
+
+### 🎯 Contenido Especializado
+- **Documentación completa** en español
+- **Proyectos reales** desarrollados con Claude Code
+- **Guías paso a paso** para principiantes
+- **Recursos descargables** y templates
 
 ## 🏗️ Estructura del Proyecto
 
 ```
-claude-code-docs/
+academy-nocode-claude-code/
 ├── docs/                          # Documentación principal
 │   ├── proyectos/                 # Proyectos desarrollados con Claude Code
-│   │   ├── web-development/       # Proyectos de desarrollo web
-│   │   ├── automation/            # Automatizaciones y scripts
+│   │   ├── web-development/       # Desarrollo web con IA
+│   │   ├── automation/            # Automatizaciones inteligentes
 │   │   ├── ai-integration/        # Integraciones con IA
-│   │   └── tools/                 # Herramientas y utilidades
+│   │   └── tools/                 # Herramientas CLI personalizadas
 │   ├── herramientas/              # Herramientas para Claude Code
-│   │   ├── extensions/            # Extensiones y plugins
-│   │   ├── templates/             # Templates y boilerplates
+│   │   ├── extensions/            # Extensiones VS Code
+│   │   ├── templates/             # Templates Academy NoCode
 │   │   ├── workflows/             # Workflows optimizados
 │   │   └── integraciones/         # Integraciones con otras herramientas
-│   ├── guias/                     # Guías y tutoriales
-│   │   ├── instalacion/           # Instalación y configuración
-│   │   ├── primeros-pasos/        # Primeros pasos con Claude Code
-│   │   ├── avanzado/              # Técnicas avanzadas
-│   │   └── troubleshooting/       # Solución de problemas
-│   ├── recursos/                  # Recursos descargables
+│   ├── guias/                     # Guías por Germán Huertas
+│   │   ├── instalacion.md         # Instalación completa
+│   │   ├── primeros-pasos.md      # Tutorial para principiantes
+│   │   ├── conceptos-basicos.md   # Fundamentos explicados
+│   │   └── mejores-practicas.md   # Best practices
+│   ├── recursos/                  # Recursos Academy NoCode
+│   │   ├── repositorios-utiles.md # Colección curada de repos
 │   │   ├── templates/             # Templates de proyectos
 │   │   ├── snippets/              # Code snippets útiles
-│   │   ├── configuraciones/       # Archivos de configuración
-│   │   └── checklists/            # Checklists y referencias
+│   │   └── configuraciones/       # Configuraciones optimizadas
 │   └── casos-uso/                 # Casos de uso específicos
 │       ├── desarrollo-web/        # Desarrollo web con Claude Code
-│       ├── data-science/          # Ciencia de datos
+│       ├── data-science/          # Ciencia de datos con IA
 │       ├── automation/            # Automatización de tareas
-│       └── ai-development/        # Desarrollo con IA
-├── blog/                          # Artículos y updates
+│       └── ai-development/        # Desarrollo con IA avanzado
+├── blog/                          # Blog Academy NoCode
+├── src/                           # Componentes React personalizados
+│   ├── components/
+│   │   └── DocExplorer/           # Explorador interactivo
+│   ├── pages/
+│   │   └── explorer.tsx           # Página del explorador
+│   └── css/custom.css             # Branding Academy NoCode
 └── static/                        # Recursos estáticos
-    ├── img/                       # Imágenes y capturas
-    ├── downloads/                 # Archivos descargables
-    └── demos/                     # Demos y ejemplos
+    ├── img/                       # Imágenes y logos
+    └── screenshots/               # Capturas automáticas
 ```
-
-## 📚 Contenido Principal
-
-### 🚀 Proyectos
-Documentación completa de proyectos desarrollados usando Claude Code:
-- **Aplicaciones web** completas
-- **Scripts de automatización** 
-- **Herramientas CLI** personalizadas
-- **Integraciones con APIs**
-- **Proyectos de IA** y machine learning
-
-### 🛠️ Herramientas
-Herramientas que potencian Claude Code:
-- **Extensiones** de VS Code para Claude Code
-- **Templates** de proyectos listos para usar
-- **Workflows** optimizados para desarrollo
-- **Integraciones** con GitHub, Docker, etc.
-
-### 📖 Guías
-Tutoriales paso a paso:
-- **Instalación** y configuración inicial
-- **Primeros proyectos** con Claude Code
-- **Técnicas avanzadas** y best practices
-- **Debugging** y troubleshooting
-
-### 📦 Recursos
-Recursos descargables y reutilizables:
-- **Code snippets** frecuentemente usados
-- **Configuraciones** optimizadas
-- **Templates** de proyectos
-- **Checklists** de desarrollo
-
-### 💡 Casos de Uso
-Implementaciones específicas por dominio:
-- **Desarrollo web** frontend y backend
-- **Análisis de datos** y visualización
-- **Automatización** de workflows
-- **Desarrollo de aplicaciones IA**
 
 ## 🚀 Inicio Rápido
 
 ### Prerequisitos
 - Node.js 18.0 o superior
 - npm o yarn
-- Claude Code CLI instalado
+- Claude Code CLI instalado (opcional para desarrollo)
 
 ### Instalación
 
 ```bash
 # Clonar el repositorio
-git clone [repository-url]
+git clone https://github.com/Nocodeboy/claude-code-docs.git
 cd claude-code-docs
 
 # Instalar dependencias
@@ -115,144 +98,163 @@ El sitio estará disponible en `http://localhost:3000`
 ```bash
 # Desarrollo
 npm start              # Servidor de desarrollo
-npm run dev            # Desarrollo con host 0.0.0.0
-
-# Build
 npm run build          # Build de producción
-npm run serve:build    # Build y servir localmente
-
-# Utilidades
-npm run clear          # Limpiar cache
+npm run serve          # Servir build localmente
+npm run clear          # Limpiar cache de Docusaurus
 npm run typecheck      # Verificar tipos TypeScript
+
+# Utilidades Academy NoCode
+node scripts/take-screenshots.js     # Capturar screenshots automáticos
+node scripts/take-screenshots.js local     # Solo screenshots locales
 ```
 
-## 📝 Contribuir
+## 🎨 Branding Academy NoCode
 
-### Agregar un Nuevo Proyecto
+### Colores Principales
+- **Naranja principal**: `#ff3d00` (Academy NoCode Orange)
+- **Paleta complementaria**: Variantes de naranja y grises elegantes
+- **Paleta elegante**: Grises sofisticados para fondos y texto
 
-1. **Crear carpeta** en `docs/proyectos/[categoria]/`
-2. **Documentar** con la estructura:
-   ```markdown
-   # Nombre del Proyecto
-   
-   ## Descripción
-   ## Tecnologías Usadas
-   ## Instalación
-   ## Uso
-   ## Capturas de Pantalla
-   ## Lecciones Aprendidas
-   ## Código Fuente
-   ```
+### Logo
+- **Logo unificado**: `static/img/logo.png`
+- **Dimensiones**: 32x32px optimizado
+- **Uso**: Funciona en modo claro y oscuro
 
-### Agregar una Nueva Herramienta
+### Tipografía
+- **Font family**: Inter (Google Fonts)
+- **Jerarquía visual**: Optimizada para documentación técnica
+- **Accesibilidad**: Cumple estándares WCAG AA
 
-1. **Crear archivo** en `docs/herramientas/[categoria]/`
-2. **Incluir**:
-   - Descripción y casos de uso
-   - Instalación e configuración
-   - Ejemplos prácticos
-   - Links de descarga
+## 📚 Contenido Principal
 
-### Agregar una Guía
+### 🚀 Proyectos Reales
+Documentación completa de proyectos desarrollados por Academy NoCode:
+- **Centro de documentación** (este mismo sitio) - Creado en 35 minutos
+- **Sistema de screenshots automáticos** con Puppeteer
+- **Aplicaciones web** completas con IA integrada
+- **Scripts de automatización** inteligentes
 
-1. **Crear archivo** en `docs/guias/[categoria]/`
-2. **Seguir estructura**:
-   - Objetivo de la guía
-   - Prerequisitos
-   - Pasos detallados con código
-   - Troubleshooting común
-   - Recursos adicionales
+### 🛠️ Herramientas Especializadas
+Herramientas que potencian tu experiencia con Claude Code:
+- **Extensiones** de VS Code para Claude Code
+- **Templates Academy NoCode** listos para usar
+- **Workflows** optimizados por Germán Huertas
+- **Integraciones** con GitHub, Docker, y más
 
-## 🎨 Personalización
+### 📖 Guías por Germán Huertas
+Tutoriales paso a paso creados específicamente para hispanohablantes:
+- **Instalación completa** con troubleshooting
+- **Primeros pasos** con proyecto práctico
+- **Conceptos fundamentales** explicados de forma simple
+- **Mejores prácticas** basadas en experiencia real
 
-### Configuración
-- **Docusaurus config**: `docusaurus.config.ts`
-- **Navegación**: `sidebars.ts`
-- **Estilos**: `src/css/custom.css`
-- **Páginas personalizadas**: `src/pages/`
+### 📦 Recursos Academy NoCode
+Recursos descargables y reutilizables:
+- **Repositorios útiles** curados por la comunidad
+- **Code snippets** frecuentemente usados
+- **Configuraciones optimizadas** para máxima productividad
+- **Templates** de proyectos Academy NoCode
 
-### Tema
-El sitio usa un tema personalizado optimizado para documentación técnica:
-- **Colores**: Esquema basado en los colores de Claude
-- **Tipografía**: Optimizada para código y lectura técnica
-- **Navegación**: Estructura jerárquica clara
-- **Responsive**: Optimizado para todos los dispositivos
+## 🌟 Características Técnicas
 
-## 🔧 Tecnologías
+### ⚡ Rendimiento
+- ✅ **Build optimizado** con Docusaurus 3.8.1
+- ✅ **Imágenes optimizadas** y lazy loading
+- ✅ **CSS minificado** con variables CSS custom
+- ✅ **TypeScript** para mejor desarrollo
 
-- **Framework**: [Docusaurus](https://docusaurus.io/) v3.x
-- **Lenguaje**: TypeScript
-- **Styling**: CSS Modules + Custom CSS
-- **Deploy**: Compatible con Netlify, Vercel, GitHub Pages
-- **Search**: Algolia DocSearch (opcional)
-
-## 📊 Estructura de Contenido
-
-### Categorización
-- **Por tipo**: Proyectos, Herramientas, Guías, Recursos
-- **Por nivel**: Principiante, Intermedio, Avanzado
-- **Por dominio**: Web, Data, AI, Automation
-- **Por fecha**: Cronológico para tracking de progreso
-
-### Metadata
-Cada documento incluye:
-```yaml
----
-title: Título del documento
-description: Descripción breve
-tags: [claude-code, web, tutorial]
-difficulty: principiante|intermedio|avanzado
-last_updated: 2024-01-01
----
-```
-
-## 🌟 Características
-
-- ✅ **Búsqueda full-text** en toda la documentación
-- ✅ **Navegación intuitiva** con sidebar automático
+### 🎯 UX/UI
+- ✅ **Explorador interactivo** con búsqueda y filtros
 - ✅ **Responsive design** para todos los dispositivos
+- ✅ **Dark/Light mode** automático
+- ✅ **Navegación intuitiva** con sidebar automático
+- ✅ **Accesibilidad WCAG AA** compliant
+
+### 🔧 Características Avanzadas
+- ✅ **Screenshots automáticos** con Puppeteer
 - ✅ **Syntax highlighting** para múltiples lenguajes
-- ✅ **Dark/Light mode** toggle
-- ✅ **Versioning** de la documentación
 - ✅ **SEO optimizado** para mejor discoverabilidad
-- ✅ **Analytics** para tracking de uso
+- ✅ **PWA ready** para instalación offline
+- ✅ **Analytics integrado** para tracking de uso
 
-## 📈 Roadmap
+## 🚀 Deployment
 
-### Fase 1: Fundación ✅
-- [x] Setup inicial de Docusaurus
-- [x] Estructura básica de contenido
-- [x] Tema personalizado
+### Vercel (Recomendado)
+El sitio se despliega automáticamente en Vercel:
+- **URL**: [https://claude-code-docs.vercel.app](https://claude-code-docs.vercel.app)
+- **Deploy automático** con cada push a `master`
+- **Optimizaciones automáticas** de Vercel
 
-### Fase 2: Contenido Core 🚧
-- [ ] 10 proyectos documentados
-- [ ] 20 herramientas catalogadas
-- [ ] 15 guías fundamentales
-- [ ] 50 recursos descargables
+### Otros Providers
+Compatible con:
+- Netlify
+- GitHub Pages
+- Docker
+- Cualquier hosting estático
 
-### Fase 3: Funcionalidades Avanzadas 📅
+## 📊 Roadmap Academy NoCode
+
+### ✅ Fase 1: Fundación (Completada)
+- [x] Setup inicial con branding Academy NoCode
+- [x] Explorador interactivo de documentación
+- [x] Guías fundamentales por Germán Huertas
+- [x] Sistema de screenshots automáticos
+- [x] Deploy en producción
+
+### 🚧 Fase 2: Expansión de Contenido
+- [ ] 20 proyectos documentados
+- [ ] 30 herramientas catalogadas
+- [ ] 25 guías especializadas
+- [ ] 100 recursos descargables
+
+### 📅 Fase 3: Funcionalidades Avanzadas
 - [ ] Integración con Algolia Search
-- [ ] Sistema de comentarios
-- [ ] Newsletter integration
-- [ ] API de contenido
+- [ ] Sistema de comentarios de la comunidad
+- [ ] Newsletter Academy NoCode
+- [ ] API de contenido para developers
 
-### Fase 4: Comunidad 🔮
-- [ ] Contribuciones de la comunidad
-- [ ] Sistema de ratings
-- [ ] Foro de discusión
-- [ ] Showcase de proyectos
+### 🔮 Fase 4: Comunidad Academy NoCode
+- [ ] Contribuciones de estudiantes
+- [ ] Sistema de ratings y reviews
+- [ ] Foro de discusión integrado
+- [ ] Showcase de proyectos de la comunidad
+
+## 🤝 Contribuir
+
+### Para Estudiantes
+1. **Fork** el repositorio
+2. **Crea** una nueva rama para tu contribución
+3. **Documenta** tu proyecto o herramienta
+4. **Envía** un Pull Request con descripción detallada
+
+### Para la Comunidad
+- **Comparte** tus proyectos de Claude Code
+- **Sugiere** mejoras al contenido
+- **Reporta** bugs o problemas
+- **Traducte** contenido a otros idiomas
 
 ## 📄 Licencia
 
 MIT License - Ver `LICENSE` para más detalles.
 
-## 🤝 Contacto
+## 🤝 Contacto Academy NoCode
 
-- **Maintainer**: [Tu nombre]
-- **Email**: [tu-email]
-- **GitHub**: [tu-github]
-- **Claude Code Issues**: [link-to-issues]
+### Germán Huertas
+- **𝕏 Twitter**: [@Nocodeboy](https://x.com/Nocodeboy)
+- **LinkedIn**: [Germán Huertas Piquero](https://www.linkedin.com/in/germán-huertas-piquero-b89a80b1/)
+- **Web**: [academynocode.com](https://academynocode.com)
+
+### Soporte
+- **GitHub Issues**: [Reportar problemas](https://github.com/Nocodeboy/claude-code-docs/issues)
+- **Documentación oficial**: [Claude Code](https://docs.anthropic.com/claude-code)
+- **Academy NoCode**: [Cursos y recursos](https://academynocode.com)
 
 ---
 
-**Claude Code Documentation Center** - Tu fuente completa para dominar Claude Code 🚀
+**Academy NoCode** - Aprende Claude Code con Germán Huertas 🧡  
+*El centro más completo en español para dominar Claude Code*
+
+[![Academy NoCode](https://img.shields.io/badge/Academy-NoCode-FF3D00?style=for-the-badge)](https://academynocode.com)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://claude-code-docs.vercel.app)
+[![TypeScript](https://img.shields.io/badge/Built%20with-TypeScript-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
+[![Claude Code](https://img.shields.io/badge/Powered%20by-Claude%20Code-8B5CF6?style=for-the-badge)](https://claude.ai/code)
