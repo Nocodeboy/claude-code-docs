@@ -5,20 +5,22 @@
 
 /* Variables principales de Claude Code Documentation */
 :root {
-  /* Colores primarios - Claude Code Documentation brand */
-  --ifm-color-primary: #6366f1;
-  --ifm-color-primary-dark: #4f46e5;
-  --ifm-color-primary-darker: #4338ca;
-  --ifm-color-primary-darkest: #3730a3;
-  --ifm-color-primary-light: #818cf8;
-  --ifm-color-primary-lighter: #a5b4fc;
-  --ifm-color-primary-lightest: #c7d2fe;
+  /* Colores primarios - Academy NoCode brand */
+  --ifm-color-primary: #ff3d00;
+  --ifm-color-primary-dark: #e63500;
+  --ifm-color-primary-darker: #cc2f00;
+  --ifm-color-primary-darkest: #b32900;
+  --ifm-color-primary-light: #ff5722;
+  --ifm-color-primary-lighter: #ff7043;
+  --ifm-color-primary-lightest: #ff8965;
   
-  /* Colores secundarios */
-  --ifm-color-secondary: #10b981;
-  --ifm-color-success: #22c55e;
-  --ifm-color-warning: #f59e0b;
-  --ifm-color-danger: #ef4444;
+  /* Colores secundarios - Complementarios al naranja */
+  --ifm-color-secondary: #00bcd4;
+  --ifm-color-success: #4caf50;
+  --ifm-color-warning: #ff9800;
+  --ifm-color-danger: #f44336;
+  --ifm-color-accent: #2196f3;
+  --ifm-color-neutral: #607d8b;
   
   /* Typography - Improved hierarchy */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -44,13 +46,13 @@
 
 /* Dark mode theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #818cf8;
-  --ifm-color-primary-dark: #6366f1;
-  --ifm-color-primary-darker: #4f46e5;
-  --ifm-color-primary-darkest: #4338ca;
-  --ifm-color-primary-light: #a5b4fc;
-  --ifm-color-primary-lighter: #c7d2fe;
-  --ifm-color-primary-lightest: #e0e7ff;
+  --ifm-color-primary: #ff5722;
+  --ifm-color-primary-dark: #ff3d00;
+  --ifm-color-primary-darker: #e63500;
+  --ifm-color-primary-darkest: #cc2f00;
+  --ifm-color-primary-light: #ff7043;
+  --ifm-color-primary-lighter: #ff8965;
+  --ifm-color-primary-lightest: #ffab91;
   
   --ifm-code-background: #1e293b;
   --ifm-code-color: #cbd5e1;
@@ -103,7 +105,7 @@
 }
 
 .button--primary {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #ff3d00, #ff5722);
   border: none;
 }
 
@@ -194,17 +196,17 @@
 }
 
 .badge--primary {
-  background: #6366f1;
+  background: #ff3d00;
   color: white;
 }
 
 .badge--success {
-  background: #10b981;
+  background: #4caf50;
   color: white;
 }
 
 .badge--warning {
-  background: #f59e0b;
+  background: #ff9800;
   color: white;
 }
 

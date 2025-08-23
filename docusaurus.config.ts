@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Centro de Documentación Claude Code',
-  tagline: 'Tu centro completo para dominar Claude Code - El CLI de IA de Anthropic',
+  title: 'Academy NoCode - Centro Claude Code',
+  tagline: 'Tu centro completo para dominar Claude Code con Germán Huertas',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,7 +15,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'claude-code-community', // Usually your GitHub org/user name.
+  organizationName: 'Nocodeboy', // Usually your GitHub org/user name.
   projectName: 'claude-code-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
@@ -69,10 +69,13 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/claude-code-social-card.jpg',
     navbar: {
-      title: 'Claude Code Docs',
+      title: 'Academy NoCode',
       logo: {
-        alt: 'Claude Code Logo',
-        src: 'img/claude-code-logo.svg',
+        alt: 'Academy NoCode Logo',
+        src: 'img/logo-light.png',
+        srcDark: 'img/logo-dark.png',
+        width: 32,
+        height: 32,
       },
       items: [
         {to: '/explorer', label: '🔍 Explorador', position: 'left'},
@@ -84,13 +87,18 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/anthropics/claude-code',
-          label: 'Claude Code GitHub',
+          href: 'https://x.com/Nocodeboy',
+          label: '𝕏 Twitter',
           position: 'right',
         },
         {
-          href: 'https://claude.ai/code',
-          label: 'Claude Code Web',
+          href: 'https://www.linkedin.com/in/germán-huertas-piquero-b89a80b1/',
+          label: 'LinkedIn',
+          position: 'right',
+        },
+        {
+          href: 'https://academynocode.com',
+          label: 'Academy NoCode',
           position: 'right',
         },
       ],
@@ -144,6 +152,27 @@ const config: Config = {
           title: 'Comunidad',
           items: [
             {
+              label: 'Academy NoCode',
+              href: 'https://academynocode.com',
+            },
+            {
+              label: '𝕏 Twitter/X',
+              href: 'https://x.com/Nocodeboy',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/germán-huertas-piquero-b89a80b1/',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+          ],
+        },
+        {
+          title: 'Claude Code',
+          items: [
+            {
               label: 'Claude Code GitHub',
               href: 'https://github.com/anthropics/claude-code',
             },
@@ -152,17 +181,13 @@ const config: Config = {
               href: 'https://github.com/anthropics/claude-code/issues',
             },
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'Contribuir',
-              href: 'https://github.com/claude-code-community/claude-code-docs/blob/main/CONTRIBUTING.md',
+              label: 'Documentación Oficial',
+              href: 'https://docs.anthropic.com/claude-code',
             },
           ],
         },
       ],
-      copyright: `Copyright © 2025 Claude Code Documentation Center. Construido con Docusaurus.`,
+      copyright: `Copyright © 2025 Academy NoCode by Germán Huertas. Construido con Docusaurus y Claude Code.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -193,11 +218,11 @@ const config: Config = {
     // },
     // Announcement bar for important updates
     announcementBar: {
-      id: 'claude-code-docs-launch',
+      id: 'academy-nocode-claude-code',
       content:
-        '🚀 ¡Bienvenido al Centro de Documentación de Claude Code! Este sitio está en desarrollo activo.',
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
+        '🚀 ¡Bienvenido a Academy NoCode! Aprende Claude Code con Germán Huertas.',
+      backgroundColor: '#fff3e0',
+      textColor: '#e65100',
       isCloseable: true,
     },
   } satisfies Preset.ThemeConfig,

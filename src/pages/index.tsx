@@ -13,9 +13,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          Centro de Documentación Claude Code
+          Academy NoCode - Claude Code
         </Heading>
-        <p className="hero__subtitle">Tu centro completo para dominar Claude Code - El CLI de IA de Anthropic 🚀</p>
+        <p className="hero__subtitle">Aprende Claude Code con Germán Huertas - El centro más completo en español 🚀</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -78,9 +78,9 @@ function HomepageFeatures() {
     <section className="padding-vert--xl">
       <div className="container">
         <div className="text--center margin-bottom--xl">
-          <Heading as="h2">¿Qué encontrarás en Claude Code Docs?</Heading>
+          <Heading as="h2">¿Qué encontrarás en Academy NoCode?</Heading>
           <p style={{fontSize: '1.2rem', color: 'var(--ifm-color-emphasis-600)'}}>
-            El centro de documentación más completo sobre Claude Code, el CLI oficial de Anthropic
+            El centro de documentación en español más completo sobre Claude Code con Germán Huertas
           </p>
         </div>
         <div className="row">
@@ -117,7 +117,7 @@ function HomepageFeatures() {
                   <h4>💻 Para Desarrolladores</h4>
                 </div>
                 <div className="card__body">
-                  <p>Convierte ideas en código funcional, automatiza tareas de desarrollo, analiza codebases completos y ejecuta cambios coordinados en múltiples archivos.</p>
+                  <p>Aprende con Germán Huertas cómo convertir ideas en código funcional, automatizar tareas de desarrollo y dominar Claude Code desde cero.</p>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ function HomepageFeatures() {
                   <h4>🎯 Para la Comunidad</h4>
                 </div>
                 <div className="card__body">
-                  <p>Comparte proyectos, herramientas y conocimientos. Construyamos juntos el futuro del desarrollo con IA.</p>
+                  <p>Únete a Academy NoCode y aprende junto a otros desarrolladores. Construyamos juntos el futuro del desarrollo con IA.</p>
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ function HomepageFeatures() {
             <Link
               className="button button--primary button--lg"
               to="/docs/intro">
-              🚀 Comenzar mi viaje con Claude Code
+              🚀 Comenzar mi viaje con Academy NoCode
             </Link>
           </div>
         </div>
@@ -205,8 +205,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="Claude Code - Centro de Documentación"
-      description="Centro de documentación completo sobre Claude Code. Proyectos, herramientas, guías y recursos para dominar el CLI de Anthropic.">
+      title="Academy NoCode - Centro Claude Code"
+      description="Aprende Claude Code con Germán Huertas. El centro de documentación en español más completo con proyectos, herramientas y guías paso a paso.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
