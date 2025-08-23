@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
   padding: 4rem 0;
   margin-bottom: 2rem;
 }
@@ -29,7 +29,7 @@
 
 .heroSubtitle {
   font-size: 1.2rem;
-  opacity: 0.8;
+  color: #cbd5e1;
   margin-bottom: 3rem;
 }
 
@@ -41,12 +41,13 @@
 }
 
 .actionCard {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 12px;
   padding: 2rem;
   backdrop-filter: blur(10px);
   text-align: left;
+  color: #f1f5f9;
 }
 
 .stepNumber {
@@ -66,22 +67,24 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #f1f5f9;
 }
 
 .actionCard p {
-  opacity: 0.8;
+  color: #cbd5e1;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
 .codeBlock {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e293b;
+  border: 1px solid #475569;
   border-radius: 8px;
   padding: 1rem;
   position: relative;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 0.9rem;
+  color: #cbd5e1;
 }
 
 .copyBtn {
@@ -113,13 +116,17 @@
 }
 
 .comment {
-  color: #22c55e;
+  color: #10b981;
   margin-left: 1rem;
 }
 
 .searchPrompt {
   text-align: center;
   margin-top: 2rem;
+}
+
+.searchPrompt p {
+  color: #cbd5e1;
 }
 
 /* Search Section */
@@ -129,14 +136,14 @@
 }
 
 .searchHeader h2 {
-  color: #22c55e;
+  color: #1f2937;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .searchHeader p {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
@@ -149,18 +156,19 @@
 .searchInput {
   width: 100%;
   padding: 1rem 1.5rem;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #d1d5db;
   border-radius: 12px;
   font-size: 1.1rem;
-  background: #f9fafb;
+  background: #ffffff;
+  color: #1f2937;
   transition: all 0.2s;
 }
 
 .searchInput:focus {
   outline: none;
-  border-color: #22c55e;
+  border-color: #6366f1;
   background: white;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 /* Filters */
@@ -181,7 +189,7 @@
 
 .filterGroup span {
   font-weight: 600;
-  color: #374151;
+  color: #1f2937;
   margin-right: 0.5rem;
 }
 
@@ -229,7 +237,7 @@
 .sectionTitle {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #111827;
+  color: #0f172a;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -288,13 +296,13 @@
 .cardTitle {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #111827;
+  color: #0f172a;
   margin-bottom: 0.8rem;
   line-height: 1.3;
 }
 
 .cardDescription {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -316,7 +324,7 @@
 
 .tag {
   background: #f3f4f6;
-  color: #6b7280;
+  color: #374151;
   padding: 0.2rem 0.6rem;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -330,7 +338,7 @@
 /* No Results */
 .noResults {
   text-align: center;
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.1rem;
   margin: 4rem 0;
 }
@@ -382,4 +390,74 @@
     padding: 1rem;
     font-size: 1rem;
   }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme='dark'] .searchHeader h2 {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .searchHeader p {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .searchInput {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+[data-theme='dark'] .searchInput:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+[data-theme='dark'] .filterGroup span {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .filterBtn {
+  background: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .filterBtn:hover {
+  background: #4b5563;
+  border-color: #6b7280;
+}
+
+[data-theme='dark'] .sectionTitle {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .docCard {
+  background: #1e293b;
+  border-color: #374151;
+}
+
+[data-theme='dark'] .docCard:hover {
+  border-color: #ff6b35;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+[data-theme='dark'] .cardTitle {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .cardDescription {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .tag {
+  background: #374151;
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .noResults {
+  color: #cbd5e1;
 }
