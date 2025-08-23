@@ -1,7 +1,7 @@
 ---
 slug: claude-code-guia-2025
 title: Claude Code - Guía verificada 2025
-authors: claude-code-docs
+authors: [academy-nocode]
 tags: [claude-code, 2025, guía, instalación]
 date: 2025-08-22
 ---
