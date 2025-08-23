@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://claude-code-docs.netlify.app',
+  url: 'https://claude-code-docs.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -72,8 +72,7 @@ const config: Config = {
       title: 'Academy NoCode',
       logo: {
         alt: 'Academy NoCode Logo',
-        src: 'img/logo-light.png',
-        srcDark: 'img/logo-dark.png',
+        src: 'img/logo.png',
         width: 32,
         height: 32,
       },

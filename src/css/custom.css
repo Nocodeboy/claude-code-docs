@@ -54,7 +54,7 @@
   --ifm-color-primary-lighter: #ff8965;
   --ifm-color-primary-lightest: #ffab91;
   
-  --ifm-code-background: #1e293b;
+  --ifm-code-background: #1f2937;
   --ifm-code-color: #cbd5e1;
   --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.2);
 }
@@ -129,7 +129,7 @@
 }
 
 [data-theme='dark'] .features {
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  background: linear-gradient(to bottom, #111827, #1f2937);
 }
 
 /* Navbar customization */
@@ -140,7 +140,7 @@
 }
 
 [data-theme='dark'] .navbar {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(17, 24, 39, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -150,7 +150,7 @@
 }
 
 [data-theme='dark'] .theme-doc-sidebar-container {
-  border-right: 1px solid #334155;
+  border-right: 1px solid #374151;
 }
 
 /* Content area */
@@ -160,7 +160,7 @@
 
 /* Footer */
 .footer {
-  background: #1e293b;
+  background: #1f2937;
   color: #cbd5e1;
 }
 
@@ -260,15 +260,15 @@
 }
 
 [data-theme='dark'] ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #1f2937;
 }
 
 [data-theme='dark'] ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #4b5563;
 }
 
 [data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #6b7280;
 }
 
 /* Accessibility improvements */

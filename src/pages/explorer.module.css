@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
   color: #f1f5f9;
   padding: 4rem 0;
   margin-bottom: 2rem;
@@ -41,7 +41,7 @@
 }
 
 .actionCard {
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(31, 41, 55, 0.8);
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 12px;
   padding: 2rem;
@@ -77,8 +77,8 @@
 }
 
 .codeBlock {
-  background: #1e293b;
-  border: 1px solid #475569;
+  background: #1f2937;
+  border: 1px solid #4b5563;
   border-radius: 8px;
   padding: 1rem;
   position: relative;
@@ -237,7 +237,7 @@
 .sectionTitle {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #111827;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -296,7 +296,7 @@
 .cardTitle {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #111827;
   margin-bottom: 0.8rem;
   line-height: 1.3;
 }
@@ -394,7 +394,7 @@
 
 /* Dark mode support */
 [data-theme='dark'] .hero {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
 }
 
 [data-theme='dark'] .searchHeader h2 {
@@ -406,9 +406,9 @@
 }
 
 [data-theme='dark'] .searchInput {
-  background: #1e293b;
+  background: #1f2937;
   color: #f1f5f9;
-  border-color: #475569;
+  border-color: #4b5563;
 }
 
 [data-theme='dark'] .searchInput:focus {
@@ -436,7 +436,7 @@
 }
 
 [data-theme='dark'] .docCard {
-  background: #1e293b;
+  background: #1f2937;
   border-color: #374151;
 }
 
