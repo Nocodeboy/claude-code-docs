@@ -84,6 +84,18 @@ const TOOL_LOGOS = {
     <path d="M24 28h6v6a6 6 0 1 1-6-6z" fill="#1ABCFE"/>
     <path d="M30 28h-6a6 6 0 0 1 0-12h6v12z" fill="#0ACF83"/>
     <path d="M30 28h6a6 6 0 1 1-6 6V28z" fill="#FF7262"/>
+  </svg>`,
+
+  'tailwindcss-logo.svg': `<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" rx="12" fill="#06B6D4"/>
+    <path d="M32 20c-4.2 0-6.9 2.1-8 6.3 1.6-2.1 3.5-2.9 5.6-2.4 1.2.3 2.1 1.2 3 2.1 1.5 1.5 3.2 3.2 7 3.2 4.2 0 6.9-2.1 8-6.3-1.6 2.1-3.5 2.9-5.6 2.4-1.2-.3-2.1-1.2-3-2.1C37.5 21.7 35.8 20 32 20zM24 29.2c-4.2 0-6.9 2.1-8 6.3 1.6-2.1 3.5-2.9 5.6-2.4 1.2.3 2.1 1.2 3 2.1 1.5 1.5 3.2 3.2 7 3.2 4.2 0 6.9-2.1 8-6.3-1.6 2.1-3.5 2.9-5.6 2.4-1.2-.3-2.1-1.2-3-2.1C29.5 31 27.8 29.2 24 29.2z" fill="white"/>
+  </svg>`,
+
+  'shadcnui-logo.svg': `<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" rx="12" fill="#000000"/>
+    <path d="M20 20h24v8h-8v16h-8V28h-8V20z" fill="white"/>
+    <path d="M36 36h8v8h-8v-8z" fill="white" opacity="0.7"/>
+    <path d="M28 44h8v4h-8v-4z" fill="white" opacity="0.5"/>
   </svg>`
 };
 

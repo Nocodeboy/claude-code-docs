@@ -14,67 +14,67 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Cursos Estructurados',
-    emoji: '📚',
-    description: (
-      <>
-        Aprende NoCode e Inteligencia Artificial con cursos paso a paso, 
-        desde nivel básico hasta proyectos avanzados y casos de uso reales.
-      </>
-    ),
-    link: '/docs/cursos/nocode',
-  },
-  {
-    title: 'Herramientas Prácticas',
+    title: 'Herramientas de Desarrollo',
     emoji: '🛠️',
     description: (
       <>
-        Guías completas de las mejores herramientas NoCode del mercado. 
-        Bubble, Webflow, Zapier, Airtable y muchas más con ejemplos prácticos.
+        Directorio completo de herramientas modernas para desarrollo web. 
+        React, Next.js, Tailwind CSS, shadcn/ui y más con ejemplos prácticos.
       </>
     ),
-    link: '/docs/herramientas',
+    link: '/tools',
   },
   {
     title: 'Proyectos Reales',
     emoji: '🚀',
     description: (
       <>
-        Construye aplicaciones, sitios web y automatizaciones reales. 
-        Cada proyecto incluye tutorial completo y recursos descargables.
+        Aplicaciones completas desarrolladas con herramientas modernas, 
+        desde scripts simples hasta aplicaciones web complejas con IA integrada.
       </>
     ),
     link: '/docs/proyectos',
   },
   {
-    title: 'Integración con IA',
+    title: 'Guías Paso a Paso',
+    emoji: '📖',
+    description: (
+      <>
+        Desde la configuración inicial hasta técnicas avanzadas. 
+        Aprende desarrollo moderno desde cero hasta nivel experto.
+      </>
+    ),
+    link: '/docs/guias',
+  },
+  {
+    title: 'Automatización Inteligente',
     emoji: '🤖',
     description: (
       <>
-        Aprende a integrar ChatGPT, Claude, Midjourney y otras herramientas 
-        de IA en tus aplicaciones NoCode para crear soluciones innovadoras.
+        Scripts que automatizan tareas de desarrollo usando herramientas modernas:
+        testing, screenshots, deployment y más con Puppeteer y Playwright.
       </>
     ),
-    link: '/docs/cursos/ia',
+    link: '/docs/casos-uso/automation',
   },
   {
-    title: 'Tutoriales Específicos',
-    emoji: '💡',
+    title: 'Integración con IA',
+    emoji: '🧠',
     description: (
       <>
-        Soluciones rápidas para problemas específicos. Conectar APIs, 
-        automatizar procesos, resolver errores comunes y optimizar rendimiento.
+        Proyectos que combinan desarrollo moderno con herramientas de IA 
+        para crear soluciones innovadoras y aplicaciones inteligentes.
       </>
     ),
-    link: '/docs/tutoriales',
+    link: '/docs/casos-uso/ai-development',
   },
   {
     title: 'Recursos Descargables',
     emoji: '📦',
     description: (
       <>
-        Plantillas, checklists, templates de Bubble y Webflow, 
-        automatizaciones de Zapier y recursos gratuitos para acelerar tu desarrollo.
+        Configuraciones optimizadas, templates de proyectos, snippets de código
+        y recursos gratuitos para acelerar tu desarrollo moderno.
       </>
     ),
     link: '/docs/recursos',

@@ -64,6 +64,18 @@ const REAL_PNG_SOURCES = {
     url: 'https://static.figma.com/app/icon/1/icon-192.png',
     fallback: 'https://figma.com/favicon.ico',
     filename: 'figma-logo.png'
+  },
+  'tailwindcss': {
+    name: 'Tailwind CSS',
+    url: 'https://avatars.githubusercontent.com/u/67109815?s=200&v=4',
+    fallback: 'https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/tailwindcss-logotype.svg',
+    filename: 'tailwindcss-logo.png'
+  },
+  'shadcnui': {
+    name: 'shadcn/ui',
+    url: 'https://ui.shadcn.com/apple-touch-icon.png',
+    fallback: 'https://ui.shadcn.com/favicon.ico',
+    filename: 'shadcnui-logo.png'
   }
 };
 

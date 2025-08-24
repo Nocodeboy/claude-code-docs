@@ -548,6 +548,88 @@ export const TOOLS_DATA: Tool[] = [
     integrations: ['Slack', 'Notion', 'Zeplin', 'Principle', 'Abstract'],
     platforms: ['web', 'desktop', 'mobile'],
     languages: ['Design', 'Prototyping']
+  },
+  {
+    id: 'tailwindcss',
+    name: 'Tailwind CSS',
+    description: 'Framework CSS utility-first que permite crear diseños únicos sin salir del HTML. Proporciona todas las piezas de construcción necesarias para construir diseños personalizados.',
+    shortDescription: 'Framework CSS utility-first para diseño moderno',
+    category: 'design',
+    subcategory: 'CSS Framework',
+    website: 'https://tailwindcss.com',
+    documentation: 'https://tailwindcss.com/docs',
+    github: 'https://github.com/tailwindlabs/tailwindcss',
+    pricing: 'free',
+    tags: ['CSS', 'Utility-First', 'Design System', 'Responsive', 'Modern CSS'],
+    logo: '/img/tools/logos/tailwindcss-logo.png',
+    logoHq: '/img/tools/logos/tailwindcss-logo.png',
+    screenshots: [
+      '/img/tools/screenshots/tailwindcss-homepage.jpg'
+    ],
+    features: [
+      'Utility-first CSS approach',
+      'Responsive design integrado',
+      'Dark mode nativo',
+      'JIT (Just-In-Time) compilation',
+      'Plugin system extensible',
+      'Purge CSS automático'
+    ],
+    useCases: [
+      'Rapid UI development',
+      'Sistemas de diseño consistentes',
+      'Prototyping rápido',
+      'Aplicaciones React/Vue/Angular',
+      'Landing pages modernas'
+    ],
+    alternatives: ['Bootstrap', 'Foundation', 'Bulma', 'Semantic UI'],
+    difficulty: 'beginner',
+    popularity: 9,
+    lastUpdated: '2025-08-24',
+    isRecommended: true,
+    integrations: ['React', 'Vue', 'Angular', 'Next.js', 'Vite'],
+    platforms: ['web', 'cli'],
+    languages: ['CSS', 'PostCSS', 'JavaScript']
+  },
+  {
+    id: 'shadcnui',
+    name: 'shadcn/ui',
+    description: 'Componentes React copiables y personalizables construidos con Radix UI y Tailwind CSS. No es una librería, es una colección de componentes reutilizables que puedes copiar y pegar.',
+    shortDescription: 'Componentes React copiables con Radix UI y Tailwind',
+    category: 'design',
+    subcategory: 'Component Library',
+    website: 'https://ui.shadcn.com',
+    documentation: 'https://ui.shadcn.com/docs',
+    github: 'https://github.com/shadcn-ui/ui',
+    pricing: 'free',
+    tags: ['React', 'Components', 'Tailwind CSS', 'Radix UI', 'Design System'],
+    logo: '/img/tools/logos/shadcnui-logo.png',
+    logoHq: '/img/tools/logos/shadcnui-logo.png',
+    screenshots: [
+      '/img/tools/screenshots/shadcnui-homepage.jpg'
+    ],
+    features: [
+      'Componentes accesibles con Radix UI',
+      'Estilos con Tailwind CSS',
+      'Sistema de temas dark/light',
+      'TypeScript nativo',
+      'Copy & paste, no NPM install',
+      'Totalmente customizable'
+    ],
+    useCases: [
+      'Aplicaciones React modernas',
+      'Design systems empresariales',
+      'Dashboard y admin panels',
+      'Landing pages profesionales',
+      'Aplicaciones Next.js'
+    ],
+    alternatives: ['Material UI', 'Ant Design', 'Chakra UI', 'Mantine'],
+    difficulty: 'intermediate',
+    popularity: 8,
+    lastUpdated: '2025-08-24',
+    isRecommended: true,
+    integrations: ['React', 'Next.js', 'Tailwind CSS', 'Radix UI', 'TypeScript'],
+    platforms: ['web', 'cli'],
+    languages: ['React', 'TypeScript', 'CSS']
   }
 ];
 
@@ -579,7 +661,43 @@ export const getPopularTools = (limit: number = 6): Tool[] => {
 };
 
 export const getAllCategories = (): ToolCategory[] => {
-  return [...new Set(TOOLS_DATA.map(tool => tool.category))];
+  return [...new Set(TOOLS_DATA.map(tool => tool.category))
+
+  {
+    id: 'claude',
+    name: 'Claude',
+    description: 'Claude es una herramienta moderna para desarrollo que ofrece [características investigadas automáticamente].',
+    shortDescription: 'Herramienta ai-ml moderna y eficiente',
+    category: 'ai-ml',
+    subcategory: 'Tool',
+    website: 'https://claude.ai',
+    documentation: 'https://claude.ai/docs',
+    github: 'https://github.com/anthropics/claude',
+    pricing: 'free',
+    tags: ['Development', 'Tool'],
+    logo: '/img/tools/logos/claude-logo.png',
+    logoHq: '/img/tools/logos/claude-logo.png',
+    screenshots: [
+      '/img/tools/screenshots/claude-homepage.jpg'
+    ],
+    features: [
+      'Funcionalidad moderna',
+      'Fácil de usar'
+    ],
+    useCases: [
+      'Desarrollo general',
+      'Proyectos modernos'
+    ],
+    alternatives: [],
+    difficulty: 'intermediate',
+    popularity: 7,
+    lastUpdated: '2025-08-24',
+    isRecommended: false,
+    integrations: [],
+    platforms: ['web'],
+    languages: ['JavaScript']
+  }
+];
 };
 
 export const getToolsByTags = (tags: string[]): Tool[] => {

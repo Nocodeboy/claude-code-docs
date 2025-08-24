@@ -27,7 +27,15 @@
     "create-logos:force": "node scripts/create-tool-logos.js --force",
     "optimize-screenshots": "node scripts/optimize-screenshots.js",
     "get-premium-logos": "node scripts/get-premium-logos.js",
-    "setup-tools": "npm run get-premium-logos && npm run optimize-screenshots"
+    "setup-tools": "npm run get-premium-logos && npm run optimize-screenshots",
+    "add-tool": "node scripts/add-single-tool.js",
+    "add-tool:help": "node scripts/add-single-tool.js --help",
+    "add-tool:complete": "node scripts/update-tools-data.js",
+    "add-tool:frontend": "node scripts/update-tools-data.js --template frontend",
+    "add-tool:backend": "node scripts/update-tools-data.js --template backend",
+    "add-tool:agentic": "node scripts/agentic-tool-workflow.js",
+    "add-tool:ai": "node scripts/agentic-tool-workflow.js",
+    "workflow:add-tool": "node scripts/agentic-tool-workflow.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

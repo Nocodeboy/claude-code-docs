@@ -217,6 +217,50 @@ const PREMIUM_LOGO_SOURCES = {
       }
     ],
     filename: 'figma-logo.png'
+  },
+  'tailwindcss': {
+    name: 'Tailwind CSS',
+    sources: [
+      {
+        url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+        quality: 'high'
+      },
+      {
+        url: 'https://raw.githubusercontent.com/get-icon/geticon/master/icons/tailwind.svg',
+        quality: 'high'
+      },
+      {
+        url: 'https://tailwindcss.com/favicon-32x32.png',
+        quality: 'medium'
+      },
+      {
+        url: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg',
+        quality: 'high'
+      }
+    ],
+    filename: 'tailwindcss-logo.png'
+  },
+  'shadcnui': {
+    name: 'shadcn/ui',
+    sources: [
+      {
+        url: 'https://ui.shadcn.com/favicon.ico',
+        quality: 'medium'
+      },
+      {
+        url: 'https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico',
+        quality: 'medium'
+      },
+      {
+        url: 'https://avatars.githubusercontent.com/u/139895814?s=200&v=4',
+        quality: 'high'
+      },
+      {
+        url: 'https://ui.shadcn.com/apple-touch-icon.png',
+        quality: 'high'
+      }
+    ],
+    filename: 'shadcnui-logo.png'
   }
 };
 

@@ -1,57 +1,41 @@
-# Herramientas para Claude Code
+# Herramientas de Desarrollo
 
-Colección completa de herramientas, extensiones, templates y utilidades que potencian tu experiencia con **Claude Code**. Desde extensiones de VS Code hasta workflows automatizados.
+En Academy NoCode tenemos un **directorio completo de herramientas de desarrollo** que utilizamos en nuestros proyectos y recomendamos para crear aplicaciones modernas.
 
-## 🎯 Categorías de Herramientas
+## 🛠️ Directorio Interactivo de Herramientas
 
-### 🔌 Extensiones
-Extensiones que integran Claude Code con tu editor favorito.
+Explora nuestra colección curada de herramientas esenciales para el desarrollo web moderno:
 
-- **[Claude Code VS Code Extension](/docs/herramientas/extensions/vscode-extension)**
-  - Integración nativa con VS Code
-  - Autocompletado y sugerencias
-  - Debugging integrado
+**[📋 Ver Directorio Completo de Herramientas →](/tools)**
 
-- **[Vim Claude Plugin](/docs/herramientas/extensions/vim-plugin)**
-  - Plugin para Vim/Neovim
-  - Comandos personalizados
-  - Integración con terminal
+### 🎨 Categorías Principales
 
-### 📄 Templates
-Templates listos para usar que aceleran el desarrollo.
+- **Frontend**: React, Next.js, herramientas de UI
+- **Backend**: Node.js, Express, APIs
+- **DevOps**: GitHub, Docker, deployment
+- **Diseño**: Figma, Tailwind CSS, shadcn/ui
+- **Automatización**: Puppeteer, Playwright, testing
+- **Documentación**: Docusaurus, generadores de sitios
+- **Deployment**: Vercel, plataformas cloud
 
-- **[React + Claude Code Template](/docs/herramientas/templates/react-template)**
-  - Aplicación React con Claude Code integrado
-  - TypeScript configurado
-  - Testing setup incluido
+### ✨ Herramientas Destacadas
 
-- **[Python CLI Template](/docs/herramientas/templates/python-cli)**
-  - Template para herramientas CLI
-  - Click framework
-  - Claude Code integration
+Las herramientas que más utilizamos en Academy NoCode para crear proyectos profesionales:
 
-### ⚙️ Workflows
-Flujos de trabajo optimizados para diferentes casos de uso.
+- **[Tailwind CSS](https://tailwindcss.com)** - Framework CSS utility-first
+- **[shadcn/ui](https://ui.shadcn.com)** - Componentes React modernos
+- **[Next.js](https://nextjs.org)** - Framework React para producción
+- **[Docusaurus](https://docusaurus.io)** - Generador de sitios de documentación
+- **[Vercel](https://vercel.com)** - Plataforma de deployment frontend
 
-- **[CI/CD con Claude Code](/docs/herramientas/workflows/cicd-pipeline)**
-  - GitHub Actions configurado
-  - Testing automatizado
-  - Deploy automatizado
+## 🚀 ¿Por qué estas herramientas?
 
-- **[Development Workflow](/docs/herramientas/workflows/dev-workflow)**
-  - Setup de desarrollo local
-  - Hot reload configurado
-  - Debugging workflow
+En Academy NoCode seleccionamos herramientas que:
 
-### 🔗 Integraciones
-Integraciones con herramientas populares de desarrollo.
+1. **Aceleren el desarrollo** - Menos configuración, más productividad
+2. **Sean modernas** - Tecnologías actuales y bien mantenidas
+3. **Tengan buena documentación** - Fáciles de aprender y usar
+4. **Comunidad activa** - Soporte y recursos abundantes
+5. **Integración fluida** - Funcionan bien juntas
 
-- **[GitHub Integration](/docs/herramientas/integraciones/github)**
-  - GitHub Actions
-  - Auto code review
-  - Issue automation
-
-- **[Docker Integration](/docs/herramientas/integraciones/docker)**
-  - Containerización optimizada
-  - Multi-stage builds
-  - Development containers
+**[🔍 Explorar todas las herramientas →](/tools)**
