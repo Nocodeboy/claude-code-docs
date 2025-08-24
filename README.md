@@ -256,6 +256,17 @@ Compatible con:
 
 ## 🤝 Contribuir
 
+### 🛠️ Añadir Herramientas al Directorio
+¿Conoces una herramienta increíble que debería estar en nuestro directorio?
+
+**📖 Guía de Desarrollo**: [TOOLS_README.md](./TOOLS_README.md)
+
+**🚀 Proceso Rápido**:
+1. Añade datos en `src/data/toolsData.ts`
+2. Ejecuta `npm run setup-tools` para generar assets
+3. Prueba localmente en `/tools`
+4. Crea Pull Request con la nueva herramienta
+
 ### Para Estudiantes
 1. **Fork** el repositorio
 2. **Crea** una nueva rama para tu contribución
@@ -263,6 +274,7 @@ Compatible con:
 4. **Envía** un Pull Request con descripción detallada
 
 ### Para la Comunidad
+- **Añade herramientas** siguiendo nuestra [guía de desarrollo](./TOOLS_README.md)
 - **Comparte** tus proyectos de Claude Code
 - **Sugiere** mejoras al contenido
 - **Reporta** bugs o problemas
