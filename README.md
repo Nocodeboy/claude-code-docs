@@ -103,9 +103,23 @@ npm run serve          # Servir build localmente
 npm run clear          # Limpiar cache de Docusaurus
 npm run typecheck      # Verificar tipos TypeScript
 
-# Utilidades Academy NoCode
-node scripts/take-screenshots.js     # Capturar screenshots automáticos
-node scripts/take-screenshots.js local     # Solo screenshots locales
+# 🎨 Asset Management Academy NoCode
+npm run fetch-logos          # Obtener logos básicos
+npm run fetch-real-logos     # Descargar logos PNG reales
+npm run get-premium-logos    # Obtener logos premium de múltiples fuentes
+npm run optimize-screenshots # Capturar screenshots optimizados (1200x675px, 16:9)
+npm run setup-tools         # Setup completo: logos + screenshots
+
+# 📸 Screenshot Management
+npm run screenshots         # Capturar todos los screenshots
+npm run screenshots:local   # Solo screenshots locales
+npm run screenshots:external # Solo screenshots externos
+npm run screenshots:tools   # Solo screenshots de herramientas
+npm run screenshots:help    # Ver ayuda de screenshots
+
+# 🔧 Development Utils
+node scripts/fix-logos.js   # Reparar logos corruptos
+node scripts/take-screenshots.js help  # Ver opciones avanzadas
 ```
 
 ## 🎨 Branding Academy NoCode
@@ -127,9 +141,22 @@ node scripts/take-screenshots.js local     # Solo screenshots locales
 
 ## 📚 Contenido Principal
 
+### 🛠️ Directorio de Herramientas Interactivo
+**Nuevo**: Directorio completo de herramientas de desarrollo con:
+- **11 herramientas catalogadas** (Next.js, React, Docker, GitHub, etc.)
+- **Búsqueda y filtros inteligentes** por categoría, dificultad y popularidad
+- **Screenshots optimizados** capturados automáticamente (1200x675px, formato 16:9)
+- **Logos premium en PNG** descargados de fuentes oficiales
+- **Metadata completa** con casos de uso, alternativas e integraciones
+- **Sistema de puntuación** y recomendaciones curadas
+- **Páginas de detalle** con información técnica completa
+
+🌐 **Acceso**: `/tools` - Explora herramientas modernas de desarrollo
+
 ### 🚀 Proyectos Reales
 Documentación completa de proyectos desarrollados por Academy NoCode:
 - **Centro de documentación** (este mismo sitio) - Creado en 35 minutos
+- **Directorio de herramientas** con asset management automatizado
 - **Sistema de screenshots automáticos** con Puppeteer
 - **Aplicaciones web** completas con IA integrada
 - **Scripts de automatización** inteligentes
@@ -171,7 +198,11 @@ Recursos descargables y reutilizables:
 - ✅ **Accesibilidad WCAG AA** compliant
 
 ### 🔧 Características Avanzadas
-- ✅ **Screenshots automáticos** con Puppeteer
+- ✅ **Directorio de herramientas interactivo** con TypeScript
+- ✅ **Asset management automático** (logos PNG + screenshots JPG)
+- ✅ **Screenshots optimizados** con Puppeteer (1200x675px, 16:9, 85% quality)
+- ✅ **Sistema de logos premium** con múltiples fuentes de respaldo
+- ✅ **Búsqueda y filtros avanzados** por metadata
 - ✅ **Syntax highlighting** para múltiples lenguajes
 - ✅ **SEO optimizado** para mejor discoverabilidad
 - ✅ **PWA ready** para instalación offline
@@ -200,10 +231,14 @@ Compatible con:
 - [x] Guías fundamentales por Germán Huertas
 - [x] Sistema de screenshots automáticos
 - [x] Deploy en producción
+- [x] **Directorio de herramientas interactivo** con 11 tools
+- [x] **Asset management automático** (logos + screenshots)
+- [x] **Sistema de búsqueda y filtros** avanzado
 
 ### 🚧 Fase 2: Expansión de Contenido
+- [x] 11 herramientas catalogadas con metadata completa
+- [ ] 50 herramientas adicionales (VS Code, Tailwind, etc.)
 - [ ] 20 proyectos documentados
-- [ ] 30 herramientas catalogadas
 - [ ] 25 guías especializadas
 - [ ] 100 recursos descargables
 

@@ -85,6 +85,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentación',
         },
+        {to: '/tools', label: '🛠️ Herramientas', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://x.com/Nocodeboy',
@@ -115,7 +116,7 @@ const config: Config = {
             },
             {
               label: 'Herramientas',
-              to: '/docs/herramientas',
+              to: '/tools',
             },
             {
               label: 'Guías',

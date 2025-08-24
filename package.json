@@ -19,7 +19,15 @@
     "screenshots": "node scripts/take-screenshots.js",
     "screenshots:local": "node scripts/take-screenshots.js local",
     "screenshots:external": "node scripts/take-screenshots.js external",
-    "screenshots:help": "node scripts/take-screenshots.js help"
+    "screenshots:tools": "node scripts/take-screenshots.js tools",
+    "screenshots:help": "node scripts/take-screenshots.js help",
+    "fetch-logos": "node scripts/fetch-tool-logos.js",
+    "fetch-real-logos": "node scripts/fetch-real-logos.js",
+    "create-logos": "node scripts/create-tool-logos.js",
+    "create-logos:force": "node scripts/create-tool-logos.js --force",
+    "optimize-screenshots": "node scripts/optimize-screenshots.js",
+    "get-premium-logos": "node scripts/get-premium-logos.js",
+    "setup-tools": "npm run get-premium-logos && npm run optimize-screenshots"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

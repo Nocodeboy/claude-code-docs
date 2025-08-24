@@ -94,6 +94,98 @@ async function takeScreenshots(customConfig = {}) {
         }
       ]
     },
+
+    // Screenshots de herramientas del directorio
+    tool_homepages: {
+      outputDir: path.join(__dirname, '..', 'static', 'img', 'tools', 'screenshots'),
+      screenshots: [
+        {
+          name: 'nextjs-homepage',
+          url: 'https://nextjs.org',
+          description: 'Next.js - Homepage principal',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'react-homepage',
+          url: 'https://react.dev',
+          description: 'React - Nueva documentación oficial',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'docusaurus-homepage',
+          url: 'https://docusaurus.io',
+          description: 'Docusaurus - Sitio principal',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'vercel-homepage',
+          url: 'https://vercel.com',
+          description: 'Vercel - Plataforma de deployment',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
+        },
+        {
+          name: 'vercel-dashboard',
+          url: 'https://vercel.com/dashboard',
+          description: 'Vercel - Dashboard de usuario',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000,
+          requireAuth: true
+        },
+        {
+          name: 'nodejs-homepage',
+          url: 'https://nodejs.org',
+          description: 'Node.js - Sitio oficial',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'express-homepage',
+          url: 'https://expressjs.com',
+          description: 'Express.js - Framework web',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'github-homepage',
+          url: 'https://github.com',
+          description: 'GitHub - Plataforma de desarrollo',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'docker-homepage',
+          url: 'https://docker.com',
+          description: 'Docker - Plataforma de contenedores',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
+        },
+        {
+          name: 'puppeteer-homepage',
+          url: 'https://pptr.dev',
+          description: 'Puppeteer - Documentación oficial',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'playwright-homepage',
+          url: 'https://playwright.dev',
+          description: 'Playwright - Framework de testing',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'figma-homepage',
+          url: 'https://figma.com',
+          description: 'Figma - Herramienta de diseño',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
+        }
+      ]
+    },
     
     // Screenshots de casos de uso
     use_cases: {
@@ -105,6 +197,90 @@ async function takeScreenshots(customConfig = {}) {
           description: 'Claude Code en terminal',
           selector: '.terminal-demo', // Selector específico si existe
           fullPage: false
+        }
+      ]
+    },
+    
+    // Screenshots de herramientas para el directorio
+    tools: {
+      outputDir: path.join(__dirname, '..', 'static', 'img', 'tools', 'screenshots'),
+      screenshots: [
+        {
+          name: 'nextjs-homepage',
+          url: 'https://nextjs.org',
+          description: 'Next.js - Homepage principal',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'react-homepage',
+          url: 'https://react.dev',
+          description: 'React - Nueva documentación oficial',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'docusaurus-homepage',
+          url: 'https://docusaurus.io',
+          description: 'Docusaurus - Sitio principal',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'vercel-homepage',
+          url: 'https://vercel.com',
+          description: 'Vercel - Plataforma de deployment',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
+        },
+        {
+          name: 'nodejs-homepage',
+          url: 'https://nodejs.org',
+          description: 'Node.js - Sitio oficial',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'express-homepage',
+          url: 'https://expressjs.com',
+          description: 'Express.js - Framework web',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'github-homepage',
+          url: 'https://github.com',
+          description: 'GitHub - Plataforma de desarrollo',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'docker-homepage',
+          url: 'https://docker.com',
+          description: 'Docker - Containerización',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
+        },
+        {
+          name: 'puppeteer-homepage',
+          url: 'https://pptr.dev',
+          description: 'Puppeteer - Automatización browser',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'playwright-homepage',
+          url: 'https://playwright.dev',
+          description: 'Playwright - Testing framework',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'figma-homepage',
+          url: 'https://figma.com',
+          description: 'Figma - Herramienta de diseño',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
         }
       ]
     },
@@ -142,13 +318,54 @@ async function takeScreenshots(customConfig = {}) {
     try {
       console.log(`📸 Capturando: ${screenshot.description}...`);
       
+      // Set custom viewport if specified
+      if (screenshot.viewport) {
+        await page.setViewport(screenshot.viewport);
+        console.log(`🖥️  Viewport ajustado: ${screenshot.viewport.width}x${screenshot.viewport.height}`);
+      } else {
+        // Reset to default viewport
+        await page.setViewport(config.viewport);
+      }
+      
+      // Skip if authentication is required and we're not authenticated
+      if (screenshot.requireAuth) {
+        console.log(`🔒 Requiere autenticación, saltando: ${screenshot.name}`);
+        return;
+      }
+      
       await page.goto(screenshot.url, { 
         waitUntil: 'networkidle0',
         timeout: config.timeout
       });
       
-      // Esperar tiempo adicional para asegurar que todo se cargue
-      await new Promise(resolve => setTimeout(resolve, config.delay));
+      // Wait for custom delay if specified, otherwise use default
+      const waitTime = screenshot.waitFor || config.delay;
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+      
+      // Handle cookie banners and popups (common on many sites)
+      try {
+        // Common cookie banner selectors
+        const cookieSelectors = [
+          'button[id*="accept"]',
+          'button[class*="accept"]',
+          'button[class*="cookie"]',
+          '[data-testid*="accept"]',
+          '.cookie-banner button',
+          '#cookie-accept'
+        ];
+        
+        for (const selector of cookieSelectors) {
+          const button = await page.$(selector);
+          if (button) {
+            await button.click();
+            console.log(`🍪 Cookie banner cerrado`);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            break;
+          }
+        }
+      } catch (e) {
+        // Ignore cookie banner errors
+      }
       
       // Si hay un selector específico, enfocar en él
       if (screenshot.selector) {
@@ -163,7 +380,8 @@ async function takeScreenshots(customConfig = {}) {
       
       const screenshotOptions = {
         path: outputPath,
-        fullPage: screenshot.fullPage !== false // Por defecto true, a menos que se especifique false
+        fullPage: screenshot.fullPage !== false, // Por defecto true, a menos que se especifique false
+        type: 'png'
       };
       
       // Si hay selector, capturar solo ese elemento
@@ -171,7 +389,7 @@ async function takeScreenshots(customConfig = {}) {
         try {
           const element = await page.$(screenshot.selector);
           if (element) {
-            await element.screenshot({ path: outputPath });
+            await element.screenshot({ path: outputPath, type: 'png' });
             console.log(`✅ Guardado (elemento): ${screenshot.name}.png`);
             return;
           }
@@ -185,6 +403,35 @@ async function takeScreenshots(customConfig = {}) {
       
     } catch (error) {
       console.error(`❌ Error capturando ${screenshot.name}:`, error.message);
+      
+      // Create a placeholder screenshot on error
+      try {
+        const placeholderPath = path.join(outputDir, `${screenshot.name}.png`);
+        const canvas = require('canvas');
+        const { createCanvas, loadImage } = canvas;
+        
+        const canvasWidth = 1200;
+        const canvasHeight = 630;
+        const canvasObj = createCanvas(canvasWidth, canvasHeight);
+        const ctx = canvasObj.getContext('2d');
+        
+        // Create error placeholder
+        ctx.fillStyle = '#f0f0f0';
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        
+        ctx.fillStyle = '#666666';
+        ctx.font = '24px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Screenshot not available', canvasWidth / 2, canvasHeight / 2 - 20);
+        ctx.fillText(screenshot.url, canvasWidth / 2, canvasHeight / 2 + 20);
+        
+        const buffer = canvasObj.toBuffer('image/png');
+        fs.writeFileSync(placeholderPath, buffer);
+        console.log(`📝 Placeholder creado para: ${screenshot.name}.png`);
+      } catch (placeholderError) {
+        // If placeholder creation fails, just log the original error
+        console.error(`❌ No se pudo crear placeholder:`, placeholderError.message);
+      }
     }
   };
   
@@ -244,6 +491,24 @@ async function takeUseCaseScreenshots() {
   });
 }
 
+// Capturar screenshots de herramientas (homepages)
+async function takeToolScreenshots() {
+  return takeScreenshots({
+    categories: ['tool_homepages'],
+    delay: 3000,
+    timeout: 45000 // Longer timeout for external sites
+  });
+}
+
+// Capturar screenshots completos incluyendo herramientas
+async function takeAllScreenshotsWithTools() {
+  return takeScreenshots({
+    categories: ['site', 'project', 'tools', 'tool_homepages'],
+    delay: 3000,
+    timeout: 45000
+  });
+}
+
 // Capturar todo con configuración personalizada
 async function takeAllScreenshots(customConfig = {}) {
   return takeScreenshots({
@@ -259,30 +524,37 @@ if (require.main === module) {
   
   const commands = {
     'all': takeAllScreenshots,
+    'all-with-tools': takeAllScreenshotsWithTools,
     'local': takeLocalScreenshots,
     'external': takeExternalScreenshots,
+    'tools': takeToolScreenshots,
     'use-cases': takeUseCaseScreenshots,
     'help': () => {
       console.log(`
 🔧 Scripts de Screenshots - Claude Code Docs
 
 Comandos disponibles:
-  all        - Capturar todos los screenshots (por defecto)
-  local      - Solo screenshots locales (site, project)
-  external   - Solo screenshots externos (installation, tools)  
-  use-cases  - Solo screenshots de casos de uso
-  help       - Mostrar esta ayuda
+  all             - Capturar todos los screenshots básicos (por defecto)
+  all-with-tools  - Capturar todos incluyendo herramientas
+  local           - Solo screenshots locales (site, project)
+  external        - Solo screenshots externos (installation, tools)
+  tools           - Solo screenshots de herramientas (homepages)
+  use-cases       - Solo screenshots de casos de uso
+  help            - Mostrar esta ayuda
 
 Ejemplos:
   node scripts/take-screenshots.js all
+  node scripts/take-screenshots.js tools
+  node scripts/take-screenshots.js all-with-tools
   node scripts/take-screenshots.js local
-  node scripts/take-screenshots.js external
 
 Configuración:
 - Por defecto usa localhost:3000
 - Viewport: 1920x1080
-- Timeout: 30 segundos
-- Delay entre screenshots: 2 segundos (3 para externos)
+- Timeout: 30 segundos (45 para herramientas)
+- Delay entre screenshots: 2-3 segundos
+- Auto-dismiss cookie banners
+- Placeholders en caso de error
       `);
       return Promise.resolve();
     }
@@ -307,5 +579,7 @@ module.exports = {
   takeLocalScreenshots,
   takeExternalScreenshots,
   takeUseCaseScreenshots,
-  takeAllScreenshots
+  takeToolScreenshots,
+  takeAllScreenshots,
+  takeAllScreenshotsWithTools
 };
