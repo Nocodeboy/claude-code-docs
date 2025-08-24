@@ -2,6 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
+import { Button } from '../ui/button';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -83,17 +84,17 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, emoji, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')} style={{marginBottom: '2rem'}}>
-      <div className="text--center">
-        <div style={{fontSize: '4rem', marginBottom: '1rem'}}>{emoji}</div>
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-        <Link
-          className="button button--primary button--sm"
-          to={link}>
-          Explorar →
-        </Link>
+      <div className={styles.featureCard}>
+        <div className={styles.featureEmoji}>{emoji}</div>
+        <h3 className={styles.featureTitle}>{title}</h3>
+        <p className={styles.featureDescription}>{description}</p>
+        <div className={styles.featureButton}>
+          <Button asChild variant="default" size="sm">
+            <Link to={link}>
+              Explorar →
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -103,9 +104,11 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div style={{textAlign: 'center', marginBottom: '3rem'}}>
-          <Heading as="h2">¿Qué encontrarás en Academy NoCode?</Heading>
-          <p style={{fontSize: '1.2rem', color: 'var(--ifm-color-emphasis-600)'}}>
+        <div className={styles.sectionHeader}>
+          <Heading as="h2" className={styles.sectionTitle}>
+            ¿Qué encontrarás en Academy NoCode?
+          </Heading>
+          <p className={styles.sectionSubtitle}>
             Todo lo que necesitas para dominar el NoCode y la Inteligencia Artificial
           </p>
         </div>
@@ -114,12 +117,12 @@ export default function HomepageFeatures(): ReactNode {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <div style={{textAlign: 'center', marginTop: '3rem'}}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
-            🚀 Comenzar mi viaje NoCode
-          </Link>
+        <div className={styles.ctaSection}>
+          <Button asChild variant="default" size="lg">
+            <Link to="/docs/intro">
+              🚀 Comenzar mi viaje NoCode
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

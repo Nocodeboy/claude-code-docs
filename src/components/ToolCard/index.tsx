@@ -5,6 +5,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import { Tool, CATEGORY_LABELS, CATEGORY_ICONS } from '../../data/toolsData';
+import { Badge } from '../ui/badge';
 import styles from './styles.module.css';
 
 interface ToolCardProps {

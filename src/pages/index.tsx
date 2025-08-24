@@ -191,8 +191,29 @@ function HomepageShowcase() {
         
         <div className="text--center margin-top--lg">
           <Link
-            className="button button--outline button--lg"
-            to="/docs/proyectos">
+            className="button button--primary button--lg"
+            to="/docs/proyectos"
+            style={{
+              background: 'var(--ifm-color-primary)',
+              border: 'none',
+              color: 'white',
+              padding: '0.875rem 2rem',
+              fontSize: '1rem',
+              fontWeight: '600',
+              borderRadius: '0.5rem',
+              transition: 'all 0.2s ease-in-out',
+              textDecoration: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--ifm-color-primary-dark)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'var(--ifm-color-primary)';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
             📚 Ver Todos los Proyectos
           </Link>
         </div>

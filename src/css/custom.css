@@ -757,3 +757,6 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Import shadcn globals after Academy NoCode theme to prevent override */
+@import './globals.css';
