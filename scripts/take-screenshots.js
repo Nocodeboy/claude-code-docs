@@ -183,6 +183,27 @@ async function takeScreenshots(customConfig = {}) {
           description: 'Figma - Herramienta de diseño',
           viewport: { width: 1920, height: 1080 },
           waitFor: 3000
+        },
+        {
+          name: 'tailwindcss-homepage',
+          url: 'https://tailwindcss.com',
+          description: 'Tailwind CSS - Framework utility-first',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'shadcnui-homepage',
+          url: 'https://ui.shadcn.com',
+          description: 'shadcn/ui - Componentes React copiables',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 2000
+        },
+        {
+          name: 'claude-homepage',
+          url: 'https://claude.ai',
+          description: 'Claude - Asistente de IA conversacional',
+          viewport: { width: 1920, height: 1080 },
+          waitFor: 3000
         }
       ]
     },

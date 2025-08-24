@@ -630,6 +630,49 @@ export const TOOLS_DATA: Tool[] = [
     integrations: ['React', 'Next.js', 'Tailwind CSS', 'Radix UI', 'TypeScript'],
     platforms: ['web', 'cli'],
     languages: ['React', 'TypeScript', 'CSS']
+  },
+
+  // AI & ML Tools
+  {
+    id: 'claude',
+    name: 'Claude',
+    description: 'Claude es un asistente de IA conversacional desarrollado por Anthropic, diseñado para ser útil, inofensivo y honesto. Ofrece capacidades avanzadas de procesamiento de lenguaje natural para una amplia gama de tareas.',
+    shortDescription: 'Asistente de IA conversacional avanzado',
+    category: 'ai-ml',
+    subcategory: 'AI Assistant',
+    website: 'https://claude.ai',
+    documentation: 'https://docs.anthropic.com',
+    github: 'https://github.com/anthropics',
+    pricing: 'freemium',
+    tags: ['AI', 'Machine Learning', 'Natural Language Processing', 'Conversational AI', 'Assistant'],
+    logo: '/img/tools/logos/claude-logo.png',
+    logoHq: '/img/tools/logos/claude-logo.png',
+    screenshots: [
+      '/img/tools/screenshots/claude-homepage.jpg'
+    ],
+    features: [
+      'Conversaciones naturales y contextuales',
+      'Análisis y generación de código',
+      'Procesamiento de documentos y textos',
+      'Razonamiento complejo y lógico',
+      'Multimodal (texto e imágenes)',
+      'Seguridad y alineación avanzada'
+    ],
+    useCases: [
+      'Asistencia en programación y desarrollo',
+      'Análisis de datos y documentos',
+      'Generación de contenido creativo',
+      'Educación y tutoría',
+      'Automatización de tareas cognitivas'
+    ],
+    alternatives: ['ChatGPT', 'Gemini', 'Copilot', 'Perplexity'],
+    difficulty: 'beginner',
+    popularity: 9,
+    lastUpdated: '2025-08-24',
+    isRecommended: true,
+    integrations: ['API', 'Slack', 'Claude Code', 'Various SDKs'],
+    platforms: ['web', 'api'],
+    languages: ['Natural Language', 'Code Analysis']
   }
 ];
 
@@ -661,43 +704,7 @@ export const getPopularTools = (limit: number = 6): Tool[] => {
 };
 
 export const getAllCategories = (): ToolCategory[] => {
-  return [...new Set(TOOLS_DATA.map(tool => tool.category))
-
-  {
-    id: 'claude',
-    name: 'Claude',
-    description: 'Claude es una herramienta moderna para desarrollo que ofrece [características investigadas automáticamente].',
-    shortDescription: 'Herramienta ai-ml moderna y eficiente',
-    category: 'ai-ml',
-    subcategory: 'Tool',
-    website: 'https://claude.ai',
-    documentation: 'https://claude.ai/docs',
-    github: 'https://github.com/anthropics/claude',
-    pricing: 'free',
-    tags: ['Development', 'Tool'],
-    logo: '/img/tools/logos/claude-logo.png',
-    logoHq: '/img/tools/logos/claude-logo.png',
-    screenshots: [
-      '/img/tools/screenshots/claude-homepage.jpg'
-    ],
-    features: [
-      'Funcionalidad moderna',
-      'Fácil de usar'
-    ],
-    useCases: [
-      'Desarrollo general',
-      'Proyectos modernos'
-    ],
-    alternatives: [],
-    difficulty: 'intermediate',
-    popularity: 7,
-    lastUpdated: '2025-08-24',
-    isRecommended: false,
-    integrations: [],
-    platforms: ['web'],
-    languages: ['JavaScript']
-  }
-];
+  return [...new Set(TOOLS_DATA.map(tool => tool.category))];
 };
 
 export const getToolsByTags = (tags: string[]): Tool[] => {
